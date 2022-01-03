@@ -19,4 +19,4 @@ The bookstore app will allow a user to search for a book through a database and 
 
 ##### ERD
 
-<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embeddedchart/c3ffd464-6d5f-4d3b-b995-a0d30cc6191d" id="OJZGg8da9mTJ"></iframe></div>
+![ERD with colored entities (UML notation)](https://user-images.githubusercontent.com/87440131/147990682-9c42d9f5-591c-4500-b758-9136031d1bdd.jpeg)
