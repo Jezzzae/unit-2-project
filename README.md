@@ -3,7 +3,7 @@
 
 The bookstore app will allow a user to search for a book through a database and store favorite books into a list that they will also be able to mangage and remove.
 
-User Stories
+### User Stories
 ***
 * User should be able to look up book according to Title
 * User should be able to search up book according to Author
