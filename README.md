@@ -15,7 +15,9 @@ The bookstore app will allow a user to search for a book through a database and 
 * User should have the ability to view more information on the Author 
 
 #### Endpoints
-[Endpoint.docx](https://github.com/Jezzzae/unit-2-project/files/7804215/Endpoint.docx)
+
+[Endpoints.docx](https://github.com/Jezzzae/unit-2-project/files/7804532/Endpoints.docx)
+
 
 ##### ERD
 
