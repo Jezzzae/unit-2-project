@@ -14,5 +14,9 @@ The bookstore app will allow a user to search for a book through a database and 
 * User should have the ability to remove books from list
 * User should have the ability to view more information on the Author 
 
-
+#### Endpoints
 [Endpoint.docx](https://github.com/Jezzzae/unit-2-project/files/7804215/Endpoint.docx)
+
+##### ERD
+
+![Screenshot (13)](https://user-images.githubusercontent.com/29801753/147985603-cefa8bd7-0179-4680-b79d-db37325f47d1.png)
