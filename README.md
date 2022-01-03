@@ -19,4 +19,4 @@ The bookstore app will allow a user to search for a book through a database and 
 
 ##### ERD
 
-![Screenshot (13)](https://user-images.githubusercontent.com/29801753/147985603-cefa8bd7-0179-4680-b79d-db37325f47d1.png)
+<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embeddedchart/c3ffd464-6d5f-4d3b-b995-a0d30cc6191d" id="OJZGg8da9mTJ"></iframe></div>
