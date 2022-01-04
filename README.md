@@ -3,7 +3,28 @@
 
 The Book StoreApp will allow a user to search for a book through a (predefined)database and save favorite books into a list that they will also be able to mangage by choosing which books to save, update, read, and remove.
 
-### User Stories
+### Technical requirements
+* Persist at least four models.
+* Use Spring Profiles for environment settings.
+* At least one API endpoint must perform full CRUD create, read, update, and delete actions.
+* Other API endpoints can perform CRUD based on the business use-case.
+* Expose CRUD routes that were built using REST conventions.
+* Handle exceptions gracefully.
+* Send appropriate messages back to the client in the event that an exception occurs.
+* Must have Controller and Service separate.
+* Document each end-point, such that
+* Persist at least four models.
+* Use Spring Profiles for environment settings.
+* At least one API endpoint must perform full CRUD create, read, update, and delete actions.
+* Other API endpoints can perform CRUD based on the business use-case.
+* Expose CRUD routes that were built using REST conventions.
+* Handle exceptions gracefully.
+* Send appropriate messages back to the client in the event that an exception occurs.
+* Must have Controller and Service separate.
+* Document each end-point, such that
+
+
+#### User Stories
 ***
 * Book information is predefined for user to access
 * User should not be allowed to modify any of the database data 
@@ -18,13 +39,13 @@ The Book StoreApp will allow a user to search for a book through a (predefined)d
 * When user searched for books by the Genre they should be able to see the name of genre, and the name of books in that genre
 * When user searches for a book under its publisher they will also see the publishers' name, the name of authors under publisher, and any books published by that publisher
 
-#### Endpoints
+##### Endpoints
 ![Endpoints1](https://user-images.githubusercontent.com/87440131/148090619-c19d091c-79a9-4c27-8eef-c25fe6782682.jpg)
 ![Endpoints2](https://user-images.githubusercontent.com/87440131/148090637-71497e99-cb71-4c75-abf2-b88fdafa584a.jpg)
 
 
 
-##### ERD
+###### ERD
 ![ERD with colored entities (UML notation)](https://user-images.githubusercontent.com/87440131/148090715-d84a159d-05e6-468b-86b6-367f8777aa73.png)
 
 
