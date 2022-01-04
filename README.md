@@ -21,8 +21,7 @@ The Book StoreApp will allow a user to search for a book through a (predefined)d
 #### Endpoints
 
 ![Endpoints1](https://user-images.githubusercontent.com/87440131/148084159-ee19d971-3fc2-4799-9e39-c24372b07327.jpg)
-[Endpoints2.pdf](https://github.com/Jezzzae/unit-2-project/files/7808660/Endpoints2.pdf)
-
+![Endpoints2](https://user-images.githubusercontent.com/87440131/148084520-9a4593c8-9580-4401-ae7b-10e8bcf4c1b1.jpg)
 
 ##### ERD
 
