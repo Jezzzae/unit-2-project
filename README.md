@@ -15,15 +15,13 @@ The Book StoreApp will allow a user to search for a book through a (predefined)d
 * User can save thier favorite books in a List
 * User should have the ability to add, view, update and remove books from list
 * When searching for books by the author user should be able to see name of author, author bio, num of books, and series by that author
-* When user searched for books by the Genre they should be able to see on display name of genre, name of books in that genre
-* When user searches for a book under its publisher they will also see the publishers' name, name of authors under publisher, and book names published by that publisher
+* When user searched for books by the Genre they should be able to see the name of genre, and the name of books in that genre
+* When user searches for a book under its publisher they will also see the publishers' name, the name of authors under publisher, and any books published by that publisher
 
 #### Endpoints
 
-
-![Endpoints](https://user-images.githubusercontent.com/87440131/148073273-b256aa42-e2b2-4776-a0b9-06a7280c30a3.jpg)
-![Endpoints2](https://user-images.githubusercontent.com/87440131/148073397-63cef7a3-6db3-49a1-89a5-29e296843c4c.jpg)
-![Endpoints3](https://user-images.githubusercontent.com/87440131/148073403-fd360d6e-e1a2-4dd1-af87-c99e078c7889.jpg)
+![Endpoints1](https://user-images.githubusercontent.com/87440131/148084159-ee19d971-3fc2-4799-9e39-c24372b07327.jpg)
+[Endpoints2.pdf](https://github.com/Jezzzae/unit-2-project/files/7808660/Endpoints2.pdf)
 
 
 ##### ERD
