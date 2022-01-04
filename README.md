@@ -10,10 +10,10 @@ The Book Store App will allow a user to search for a book through a (predefined)
 * User should be able to look up book according to Title, Author, Genre, and Publisher
 * User can save thier favorite books in a List
 * When user searches for books - The book should display Author, Genre, Publisher, and Title
-* User should have the ability to remove books from list
+* User should have the ability to add, view, update and remove books from list
 * When searching for books by the author user should be able to see name of author, author bio, num of books, and books by that author
-* When user searched for books by the Genre they should be able to see on display name of genre, name of books in that genre //pending sheree approval
-* When user searches for a book under its publisher they will also see the publishers' name, name of authors under publisher, and book names published by that publisher //pending sheree approval
+* When user searched for books by the Genre they should be able to see on display name of genre, name of books in that genre
+* When user searches for a book under its publisher they will also see the publishers' name, name of authors under publisher, and book names published by that publisher
 
 #### Endpoints
 
