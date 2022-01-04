@@ -19,11 +19,12 @@ The Book StoreApp will allow a user to search for a book through a (predefined)d
 * When user searches for a book under its publisher they will also see the publishers' name, the name of authors under publisher, and any books published by that publisher
 
 #### Endpoints
+![Endpoints1](https://user-images.githubusercontent.com/87440131/148090619-c19d091c-79a9-4c27-8eef-c25fe6782682.jpg)
+![Endpoints2](https://user-images.githubusercontent.com/87440131/148090637-71497e99-cb71-4c75-abf2-b88fdafa584a.jpg)
 
-![Endpoints1](https://user-images.githubusercontent.com/87440131/148084159-ee19d971-3fc2-4799-9e39-c24372b07327.jpg)
-![Endpoints2](https://user-images.githubusercontent.com/87440131/148084701-a740f503-ac21-41e5-bb47-a320e6f13242.jpg)
 
 
 ##### ERD
-![ERD with colored entities (UML notation)](https://user-images.githubusercontent.com/87440131/148085336-9c10f964-cf3f-4da7-9842-e67f543ccf96.png)
+![ERD with colored entities (UML notation)](https://user-images.githubusercontent.com/87440131/148090715-d84a159d-05e6-468b-86b6-367f8777aa73.png)
+
 
