@@ -1,11 +1,9 @@
 package com.bookstoreapp.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.LazyCollectionOption;
+
 
 import javax.persistence.*;
-import java.util.List;
+
 import java.util.Set;
 
 
@@ -30,7 +28,7 @@ public class Author {
     public Author() {
     }
 
-    public Author(Long id, String firstName, String lastName, String authorBio, String bookName, String publisher) {
+    public Author(Long id, String firstName, String lastName) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;

@@ -1,25 +1,59 @@
-package com.bookstoreapp.model;
-
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-        import org.hibernate.annotations.LazyCollection;
-        import org.hibernate.annotations.LazyCollectionOption;
-
-        import javax.persistence.*;
-        import java.util.List;
-
-@Entity
-@Table(name = "booklist")
-public class BookList {
-    @Id
-    @Column
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column
-    private String title;
-
-    @Column
-    private String description;
-
-}
+//package com.bookstoreapp.model;
+//
+//
+//import javax.persistence.*;
+//
+//import java.util.Set;
+//
+//
+//@Entity
+//@Table(name = "BookList")
+//public class BookList {
+//
+//    @Id
+//    @Column
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private Long id;
+//
+//    @Column
+//    private String firstName;
+//
+//    @Column
+//    private String lastName;
+//
+//    @ManyToMany
+//    Set<Book> books;
+//
+//    public BookList() {
+//    }
+//
+//    public BookList(Long id, String firstName, String lastName) {
+//        this.id = id;
+//        this.firstName = firstName;
+//        this.lastName = lastName;
+//    }
+//
+//    public Long getId() {
+//        return id;
+//    }
+//
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
+//
+//    public String getFirstName() {
+//        return firstName;
+//    }
+//
+//    public void setFirstName(String firstName) {
+//        this.firstName = firstName;
+//    }
+//
+//    public String getLastName() {
+//        return lastName;
+//    }
+//
+//    public void setLastName(String lastName) {
+//        this.lastName = lastName;
+//    }
+//}
