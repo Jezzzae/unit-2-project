@@ -1,18 +1,19 @@
 # unit-2-project
 ## Book Store app Sheree &amp; Jess
 
-The bookstore app will allow a user to search for a book through a database and store favorite books into a list that they will also be able to mangage and remove.
+The Book Store App will allow a user to search for a book through a (predefined)database and store favorite books into a list that they will also be able to mangage by choosing which books to remove.
 
 ### User Stories
 ***
-* User should be able to look up book according to Title
-* User should be able to search up book according to Author
-* User should be able to search up book according to Genre 
-* User should be able to search up book according to Publisher
+* Book information is predefined for user to access
+* User should not be allowed to modify any of the database data 
+* User should be able to look up book according to Title, Author, Genre, and Publisher
 * User can save thier favorite books in a List
 * When user searches for books - The book should display Author, Genre, Publisher, and Title
 * User should have the ability to remove books from list
-* User should have the ability to view more information on the Author 
+* When searching for books by the author user should be able to see name of author, author bio, num of books, and books by that author
+* When user searched for books by the Genre they should be able to see on display name of genre, name of books in that genre //pending sheree approval
+* When user searches for a book under its publisher they will also see the publishers' name, name of authors under publisher, and book names published by that publisher //pending sheree approval
 
 #### Endpoints
 
