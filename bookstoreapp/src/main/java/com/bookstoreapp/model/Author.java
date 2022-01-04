@@ -1,12 +1,8 @@
 package com.bookstoreapp.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.*;
-import java.util.List;
 
 
 @Entity
@@ -27,6 +23,12 @@ public class Author {
     @Column
     private String authorBio;
 
+    @Column
+    private String bookName;
+
+    @Column
+    private String publisher;
+
     @JsonIgnore
     @OneToOne(mappedBy = "Author")
     private Author author;
@@ -42,11 +44,13 @@ public class Author {
     public Author() {
     }
 
-    public Author(Long id, String firstName, String lastName, String authorBio) {
+    public Author(Long id, String firstName, String lastName, String authorBio, String bookName, String publisher) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.authorBio = authorBIo;
+        this.authorBio = authorBio;
+        this.bookName = bookName;
+        this.publisher = publisher;
     }
 
     public Long getId() {
@@ -80,14 +84,21 @@ public class Author {
     public void setAuthorBio(String authorBio) {
         this.authorBio = authorBio;
     }
-
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
+    }
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
     @Override
     public String toString() {
-        return "UserProfile{" +
+        return "Author{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", authorBio='" + authorBio + '\'' +
+                ", bookName='" + bookName + '\'' +
+                ", publisher='" + publisher + '\'' +
                 '}';
     }
 }
