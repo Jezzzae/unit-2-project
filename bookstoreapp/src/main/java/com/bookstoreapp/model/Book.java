@@ -1,5 +1,6 @@
 package com.bookstoreapp.model;
 
+<<<<<<< HEAD
 @Entity
 @Table(name = "books")
 public class Book {
@@ -55,4 +56,23 @@ public class Book {
     //author
 
 
+=======
+
+import javax.persistence.*;
+import java.util.Set;
+
+@Entity
+@Table(name = "Books")
+public class Book {
+    @Id
+    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column
+    private String title;
+
+    @ManyToMany
+    Set<Author> authors;
+>>>>>>> a8ccdac4af21f7dc76a6212a9e6f92a1247ce8ec
 }
