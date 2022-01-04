@@ -36,7 +36,6 @@ The Book StoreApp will allow a user to search for a book through a (predefined)d
 ###### ERD
 ![ERD with colored entities (UML notation)](https://user-images.githubusercontent.com/87440131/148090715-d84a159d-05e6-468b-86b6-367f8777aa73.png)
 
-Day 1 - Tuesday	Day 2 - Wednesday	Day 3  - Thursday	Day 4 - Friday	Day 5  - Monday
-Setup Spring boot Environment 	Create models, repos, controller and expectations	Complete booklist functionality. Allow for search features  	Make sure MVP is met and app is functional - Debugging	Morning Practice Presentation 
+###### Timeline
 ![image](https://user-images.githubusercontent.com/87440131/148092580-acfd1470-5c46-49fa-a921-5a157a2b653d.png)
 
