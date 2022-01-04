@@ -13,16 +13,6 @@ The Book StoreApp will allow a user to search for a book through a (predefined)d
 * Send appropriate messages back to the client in the event that an exception occurs.
 * Must have Controller and Service separate.
 * Document each end-point, such that
-* Persist at least four models.
-* Use Spring Profiles for environment settings.
-* At least one API endpoint must perform full CRUD create, read, update, and delete actions.
-* Other API endpoints can perform CRUD based on the business use-case.
-* Expose CRUD routes that were built using REST conventions.
-* Handle exceptions gracefully.
-* Send appropriate messages back to the client in the event that an exception occurs.
-* Must have Controller and Service separate.
-* Document each end-point, such that
-
 
 #### User Stories
 ***
