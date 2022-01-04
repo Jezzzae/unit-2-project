@@ -4,7 +4,7 @@
 The Book StoreApp will allow a user to search for a book through a (predefined)database and save favorite books into a list that they will also be able to mangage by choosing which books to save, update, read, and remove.
 
 ### Technical requirements
-~~* Persist at least four models.~~
+* ~~Persist at least four models.~~
 * Use Spring Profiles for environment settings.
 * At least one API endpoint must perform full CRUD create, read, update, and delete actions.
 * Other API endpoints can perform CRUD based on the business use-case.
@@ -15,13 +15,13 @@ The Book StoreApp will allow a user to search for a book through a (predefined)d
 * Document each end-point, such that
 
 ### Necessary Deliverables
- ~~* A Git repository hosted on GitHub.~~
-*Around 70 commits (or more) on GitHub, dating back to the very beginning of the project. (Commit early, commit often. Tell a story with your commits. Each message should give a clear idea of what you changed.)
+* ~~A Git repository hosted on GitHub.~~
+* Around 70 commits (or more) on GitHub, dating back to the very beginning of the project. (Commit early, commit often. Tell a story with your commits. Each message should give a clear idea of what you changed.)
 * A README.md file with:
 Explanations of the machineries used.
 * A couple of paragraphs about the general approach you took.
 * Descriptions of any unsolved problems or major hurdles you had to overcome.
-~~* A link to your planning documentation for how you broke down this project with deliverables and timelines.~~
+* ~~A link to your planning documentation for how you broke down this project with deliverables and timelines.~~
 * Installation instructions for any dependencies.
 ~~* A link to your user stories, ERD diagrams — who are your users, what do they want, and why?~~
 
@@ -43,7 +43,8 @@ Explanations of the machineries used.
 #### Struggles
 * Getting project approved first day 
 * understanding the scope of our project and implementing that into our erd diagram
-
+#### Dependencies
+* 
 
 ##### Endpoints
 ![Endpoints1](https://user-images.githubusercontent.com/87440131/148090619-c19d091c-79a9-4c27-8eef-c25fe6782682.jpg)
