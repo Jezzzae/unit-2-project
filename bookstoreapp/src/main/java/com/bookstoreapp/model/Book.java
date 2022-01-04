@@ -48,5 +48,11 @@ public class Book {
         //default ctor
     }
 
+    
+    //fav list
+    //genre
+    //publisher
+    //author
+
 
 }
