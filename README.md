@@ -25,5 +25,5 @@ The Book StoreApp will allow a user to search for a book through a (predefined)d
 
 
 ##### ERD
+![ERD with colored entities (UML notation)](https://user-images.githubusercontent.com/87440131/148085336-9c10f964-cf3f-4da7-9842-e67f543ccf96.png)
 
-![ERD with colored entities (UML notation)](https://user-images.githubusercontent.com/87440131/147990682-9c42d9f5-591c-4500-b758-9136031d1bdd.jpeg)
