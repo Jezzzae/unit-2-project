@@ -1,12 +1,15 @@
 package com.bookstoreapp.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+//import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.*;
+import java.util.List;
 
 
 @Entity
-@Table(name = "Author")
+@Table(name = "Authors")
 public class Author {
 
     @Id
@@ -29,17 +32,26 @@ public class Author {
     @Column
     private String publisher;
 
-    @JsonIgnore
-    @OneToOne(mappedBy = "Author")
-    private Author author;
+//    @ManyToMany (cascade = CascadeType.ALL, mappedBy = "author")
+//    @JsonIgnore
+//    private Author author;
 
-    public Author getAuthor() {
-        return author;
-    }
+//    @JsonIgnore
+//    @ManyToOne
+//    @JoinColumn(name = "book_id")
+//    private Author author;
 
-    public void setAuthor(Author author) {
-        this.author = author;
-    }
+@OneToMany(mappedBy = "author", orphanRemoval = true)
+@LazyCollection(LazyCollectionOption.FALSE)
+private List<Book> BookList;
+
+//    public Author getAuthor() {
+//        return author;
+//    }
+//
+//    public void setAuthor(Author author) {
+//        this.author = author;
+//    }
 
     public Author() {
     }

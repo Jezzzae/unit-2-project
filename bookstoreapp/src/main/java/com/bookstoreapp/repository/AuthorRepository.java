@@ -1,18 +1,21 @@
 package com.bookstoreapp.repository;
 
-import com.bookstoreapp.model.Author
+import com.bookstoreapp.model.Author;
+import com.bookstoreapp.model.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 
-}
+import java.util.List;
 
-
-@Repository
 public interface AuthorRepository  extends JpaRepository<Author, Long> {
-    // to register
-    boolean existsByFirstName(String authorfirstName);
 
-    // to login
-    User findUserByEmailAddress(String userEmailAddress);
+    List<Author> findByName(String authorName);
+
+    List<Author> findByauthorId (String authorId);
+
+    List<Author> findByGenreId(Long genreId);
+
+    List<Author> findByPublisherId(Long publisherId);
+
+    List<Author> findByBookId(Long bookId);
 }
