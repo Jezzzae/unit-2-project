@@ -3,6 +3,8 @@ package com.bookstoreapp.model;
 import javax.persistence.*;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Entity
 @Table(name = "Publisher")
@@ -16,6 +18,9 @@ public class Publisher {
     @Column
     private String publisherName;
 
-    @ManyToMany
-    Set<Publisher> publishers;
+
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "book_id")
+    private Book book;
 }

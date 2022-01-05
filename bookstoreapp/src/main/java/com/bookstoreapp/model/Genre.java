@@ -3,6 +3,9 @@ package com.bookstoreapp.model;
 import javax.persistence.*;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+
 @Entity
 @Table(name = "Genre")
 public class Genre {
@@ -13,46 +16,13 @@ public class Genre {
     private Long id;
 
     @Column
-    private  String name;
+    private String name;
 
     @Column
-    private  String subGenre;
+    private String subGenre;
 
-    @ManyToMany
-    Set<Book> books;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSubGenre() {
-        return subGenre;
-    }
-
-    public void setSubGenre(String subGenre) {
-        this.subGenre = subGenre;
-    }
-
-    public Genre (Long id, String name, String subGenre){
-        this.id = id;
-        this.name = name;
-        this.subGenre = subGenre;
-    }
-
-    public Genre(){
-        //default
-    }
-
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "book_id")
+    private Book book;
 }
