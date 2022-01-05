@@ -1,60 +1,51 @@
-//package com.bookstoreapp.model;
-//
-//import com.bookstoreapp.repository.BookList;
-//
-//import javax.persistence.*;
-//
-//import java.util.Set;
-//
-//
-//@Entity
-//@Table(name = "Users")
-//public class User {
-//
-//    @Id
-//    @Column
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private Long id;
-//
-//    @Column
-//    private String firstName;
-//
-//    @Column
-//    private String lastName;
-//
-//    @ManyToMany
-//    Set<BookList> booklists;
-//
-//    public User() {
-//    }
-//
-//    public User(Long id, String firstName, String lastName) {
-//        this.id = id;
-//        this.firstName = firstName;
-//        this.lastName = lastName;
-//    }
-//
-//    public Long getId() {
-//        return id;
-//    }
-//
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
-//
-//    public String getFirstName() {
-//        return firstName;
-//    }
-//
-//    public void setFirstName(String firstName) {
-//        this.firstName = firstName;
-//    }
-//
-//    public String getLastName() {
-//        return lastName;
-//    }
-//
-//    public void setLastName(String lastName) {
-//        this.lastName = lastName;
-//    }
-//}
+package com.bookstoreapp.model;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
+@Table(name="users")
+public class User {
+
+    @Id
+    @Column
+    private  Long userId;
+
+    @Column
+    private String userName;
+
+    @OneToOne
+    Set<List> lists;
+
+    public User(Long userId, String userName) {
+        this.userId = userId;
+        this.userName = userName;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public User (){
+        //default
+
+
+    }
+
+}
