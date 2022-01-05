@@ -1,6 +1,7 @@
 package com.bookstoreapp.controller;
 
 import com.bookstoreapp.repository.BookRepository;
+import com.bookstoreapp.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,23 +27,23 @@ public class BookController {
     @GetMapping("/books")
     public Book getBook(){
         System.out.println(" calling getBooks ==> ");
-        return bookService.getBook();
+        return BookService.getBook();
     }
 
     //2 -> CREATE a book  http://localhost:9092/api/books/
 
     @PostMapping(path="/books{bookid}")
-    public Book createBook(@PathVariable Long bookid){ //(value = "bookid")
+    public Book createBook(@PathVariable (value = "bookid") Long bookid){ //(value = "bookid")
         System.out.println("calling createBook ==> ");
-        return bookService.createBook(bookid);
+        return BookService.createBook(bookid);
     }
 
     //3 - > UPDATE a book  http://localhost:9092/api/books/1
 
     @PutMapping(path = "/books{bookid")
-    public Book updateBook(@PathVariable Long bookid){
+    public Book updateBook(@PathVariable (value = "bookid") Long bookid){
         System.out.println("calling updateBook ==> ");
-        return bookService.updateBook(bookid);
+        return BookService.updateBook(bookid);
     }
 
     //4 - > DELETE a book  http://localhost:9092/api/books/1
@@ -50,7 +51,7 @@ public class BookController {
     @DeleteMapping(path = "/books/bookid")
         public Book deleteBook(@PathVariable Long bookid){
         System.out.println("calling deleteBook ==> ");
-        return bookService.deleteBook(bookid);
+        return BookService.deleteBook(bookid);
     }
 
 }
