@@ -1,7 +1,10 @@
 package com.bookstoreapp.model;
 
-@Enitiy
-@Table (name = "Genre")
+import javax.persistence.*;
+import java.util.Set;
+
+@Entity
+@Table(name = "Genre")
 public class Genre {
 
     @Id
@@ -16,7 +19,7 @@ public class Genre {
     private  String subGenre;
 
     @ManyToMany
-    Set<Book>books;
+    Set<Book> books;
 
     public Long getId() {
         return id;

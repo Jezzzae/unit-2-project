@@ -1,14 +1,13 @@
 package com.bookstoreapp.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.LazyCollectionOption;
+
 
 import javax.persistence.*;
-import java.util.List;
+
+import java.util.Set;
 
 @Entity
-@Table(name="users")
+@Table(name="Users")
 public class User {
 
     @Id
@@ -18,9 +17,13 @@ public class User {
     @Column
     private String userName;
 
-    @OneToOne
-    Set<List> lists;
+    @OneToMany
+    Set<BookList> booklists;
+    public User (){
+        //default
 
+
+    }
     public User(Long userId, String userName) {
         this.userId = userId;
         this.userName = userName;
@@ -42,10 +45,6 @@ public class User {
         this.userName = userName;
     }
 
-    public User (){
-        //default
 
-
-    }
 
 }
