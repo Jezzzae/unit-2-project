@@ -23,7 +23,7 @@ Explanations of the machineries used.
 * Descriptions of any unsolved problems or major hurdles you had to overcome.
 * ~~A link to your planning documentation for how you broke down this project with deliverables and timelines.~~
 * Installation instructions for any dependencies.
-~~* A link to your user stories, ERD diagrams — who are your users, what do they want, and why?~~
+* ~~A link to your user stories, ERD diagrams — who are your users, what do they want, and why?~~
 
 #### User Stories
 ***
