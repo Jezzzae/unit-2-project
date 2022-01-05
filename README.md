@@ -43,6 +43,7 @@ Explanations of the machineries used.
 #### Struggles
 * Getting project approved first day 
 * understanding the scope of our project and implementing that into our erd diagram
+* understanding how to merge and pull / push without causing any more erros
 #### Dependencies
 * 
 
