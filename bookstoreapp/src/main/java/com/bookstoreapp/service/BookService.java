@@ -25,7 +25,8 @@ public class BookService {
     private static final Logger LOGGER = Logger.getLogger(BookController.class.getName());
 
 
-    private BookRepository bookRepository;
+    private static BookRepository bookRepository;
+
 
     @Autowired
     public void setBookRepository(BookRepository bookRepository) {
@@ -55,22 +56,41 @@ public class BookService {
 
         this.publisherRepository = publisherRepository;
     }
+    public static List<Book> getBook() {
+        LOGGER.info("service calling getBook==>");
+        return bookRepository.findAll();
+    }
+    public static Book updateBook(Long bookId, Book bookObject) {
+        LOGGER.info("service calling updateBook method ==> ");
+        Optional<Book> book = bookRepository.findById(bookId);
+        if (book == null) {
+            throw new InformationNotFoundException("book with id " + bookId + " not found");
+        } else {
+            book.get().setTitle(bookObject.getTitle());
+            return bookRepository.save(book.get());
+        }
+    }
 
-// Create a new book object
-    public Book createBook(Book bookObject) {
-        LOGGER.info("service calling createBook ==>");
+
+
+    // Create a new book object
+
 // throws error if book exist
+
+    public static Book createBook(Book bookObject) {
+        LOGGER.info("service calling createBook ==>");
         Book book = bookRepository.findByTitle(bookObject.getTitle());
         if (book != null) {
-            throw new InformationExistException("book with name " + book.getTitle() + " already exists");
+            throw new InformationNotFoundException("book with name " + book.getTitle() + " already exists");
         } else {
-            System.out.println(bookObject.getPublisherList());
+
             return bookRepository.save(bookObject);
         }
     }
 
-// Delete a book
-    public Book deleteBook(Long bookId) {
+
+    // Delete a book
+    public static Book deleteBook(Long bookId) {
         LOGGER.info("calling deleteBook method ==>");
 
         Optional<Book> book = bookRepository.findById(bookId);
