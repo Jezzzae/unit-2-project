@@ -5,14 +5,14 @@ The Book StoreApp will allow a user to search for a book through a (predefined)d
 
 ### Technical requirements
 * ~~Persist at least four models.~~
-* Use Spring Profiles for environment settings.
-* At least one API endpoint must perform full CRUD create, read, update, and delete actions.
+* ~~Use Spring Profiles for environment settings.
+* ~~At least one API endpoint must perform full CRUD create, read, update, and delete actions.
 * Other API endpoints can perform CRUD based on the business use-case.
 * Expose CRUD routes that were built using REST conventions.
 * Handle exceptions gracefully.
 * Send appropriate messages back to the client in the event that an exception occurs.
-* Must have Controller and Service separate.
-* Document each end-point, such that
+* ~~Must have Controller and Service separate.
+* ~~Document each end-point, such that
 
 ### Necessary Deliverables
 * ~~A Git repository hosted on GitHub.~~
@@ -27,18 +27,18 @@ Explanations of the machineries used.
 
 #### User Stories
 ***
-* Book information is predefined for user to access
-* User should not be allowed to modify any of the database data 
-* When user searches for books - The book should display Author, Genre, Publisher, and Title
-* User should be able to find a book according to Title
-* User should be able to find a book according to Author
-* User should be able to find a book according to Genre
-* User should be able to find a book according to Publisher
-* User can save thier favorite books in a List
-* User should have the ability to add, view, update and remove books from list
-* When searching for books by the author user should be able to see name of author, author bio, num of books, and series by that author
-* When user searched for books by the Genre they should be able to see the name of genre, and the name of books in that genre
-* When user searches for a book under its publisher they will also see the publishers' name, the name of authors under publisher, and any books published by that publisher
+* Book information is predefined
+* Will not be allowed to modify any of the database data 
+* When searching for books - The book should display Author, Genre, Publisher, and Title
+* Will be able to find a book according to Title
+* Will be able to find a book according to Author
+* Will be able to find a book according to Genre
+* Will be able to find a book according to Publisher
+* Ability able to move favorite books into a List
+* Ability to add, view, update and remove books from list
+* When searching for books by name of author - The author bio, num of books, and series by that author will be displayed.
+* When searching for books by the Genre - Should display the name of genre, and the name of books under that genre
+* When searching for a book under publisher- The publishers' name, the name of authors under publisher, and any books published by that publisher will be displayed
 
 #### Struggles
 * Getting project approved first day 
