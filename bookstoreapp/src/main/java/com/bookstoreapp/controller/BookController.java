@@ -26,33 +26,34 @@ public class BookController {
     private static final Logger LOGGER = Logger.getLogger(BookController.class.getName());
     //creating an instance of the book repo
     private BookService bookService;
-    private BookRepository bookRepository;
-    private AuthorRepository authorRepository;
-    private GenreRepository genreRepository;
-    private PublisherRepository publisherRepository;
+//    private BookRepository bookRepository;
+//    private AuthorRepository authorRepository;
+//    private GenreRepository genreRepository;
+//    private PublisherRepository publisherRepository;
 
     //autowiring --> you to inject the object dependency implicitly
-    @Autowired
-    public void setBookRepository(BookRepository bookRepository) {
-        this.bookRepository = bookRepository;
-    }
-
-    @Autowired
-    public void setAuthorRepository(AuthorRepository authorRepository) {
-        this.authorRepository = authorRepository;
-    }
-
-    @Autowired
-    public void setGenreRepository(GenreRepository genreRepository) {
-        this.genreRepository = genreRepository;
-    }
-
-    @Autowired
-    public void setPublisherRepository(PublisherRepository publisherRepository) {
-        this.publisherRepository = publisherRepository;
-    }
-
-
+//    @Autowired
+//    public void setBookRepository(BookRepository bookRepository) {
+//        this.bookRepository = bookRepository;
+//    }
+//
+//    @Autowired
+//    public void setAuthorRepository(AuthorRepository authorRepository) {
+//        this.authorRepository = authorRepository;
+//    }
+//
+//    @Autowired
+//    public void setGenreRepository(GenreRepository genreRepository) {
+//        this.genreRepository = genreRepository;
+//    }
+//
+//    @Autowired
+//    public void setPublisherRepository(PublisherRepository publisherRepository) {
+//        this.publisherRepository = publisherRepository;
+//    }
+//
+//
+//
     @Autowired
     public void setBookService(BookService bookService) {
         this.bookService = bookService;
@@ -116,11 +117,12 @@ public class BookController {
         return bookService.getAuthor(authorId);
     }
 
-    // create a single author
-    @PostMapping(path = "/authors/")
-    public Author createAuthor(@RequestBody Author authorObject) {
+    // create book author to the book
+    //POST http://localhost:9092/api/books/1/authors
+    @PostMapping(path = "/books/{bookId}/authors")
+    public Author createAuthor(@PathVariable Long bookId, @RequestBody Author authorObject) {
         LOGGER.info("calling createAuthor method from controller");
-        return bookService.createAuthor(authorObject);
+        return bookService.createAuthor(bookId, authorObject);
     }
 
 // update an author  http://localhost:9092/api/authors/1
@@ -158,13 +160,19 @@ public class BookController {
     }
 
     // create a single genre
-    @PostMapping(path = "/genres/")
-    public Genre createGenre(@RequestBody Genre genreObject) {
+    // http://localhost:9092/api/books/1/genres
+    @PostMapping(path = "/books/{bookId}/genres")
+    public Genre createGenre(@PathVariable Long bookId, @RequestBody Genre genreObject) {
         LOGGER.info("calling createGenre method from controller");
-        return bookService.createGenre(genreObject);
+        return bookService.createGenre(bookId, genreObject);
     }
 
-// update an author  http://localhost:9092/api/genres/1
+//    @PostMapping(path = "/books/{bookId}/authors")
+//    public Author createAuthor(@PathVariable Long bookId, @RequestBody Author authorObject) {
+//        LOGGER.info("calling createAuthor method from controller");
+//        return bookService.createAuthor(bookId, authorObject);
+
+// update an genre  http://localhost:9092/api/genres/1
 
     @PutMapping(path = "/genres/{genreId}")
     public Genre updateGenre(@PathVariable(
@@ -174,7 +182,7 @@ public class BookController {
     }
 
 
-    //  DELETE a author  http://localhost:9092/api/genres/1
+    //  DELETE a genre  http://localhost:9092/api/genres/1
     @DeleteMapping(path = "/genres/{genreId}")
     public Optional<Genre> deleteGenre(@PathVariable(value = "genreId") Long genreId) {
         LOGGER.info("calling deleteGenre method from controller");
