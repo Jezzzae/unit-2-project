@@ -7,16 +7,16 @@ The Book StoreApp will allow a user to search for a book through a (predefined)d
 * ~~Persist at least four models.~~
 * ~~Use Spring Profiles for environment settings.~~
 * ~~At least one API endpoint must perform full CRUD create, read, update, and delete actions.~~
-* Other API endpoints can perform CRUD based on the business use-case.
+* ~~Other API endpoints can perform CRUD based on the business use-case.~~
 * Expose CRUD routes that were built using REST conventions.
-* Handle exceptions gracefully.
-* Send appropriate messages back to the client in the event that an exception occurs.
+* ~~Handle exceptions gracefully.~~
+* ~~Send appropriate messages back to the client in the event that an exception occurs.~~
 * ~~Must have Controller and Service separate.~~
 * ~~Document each end-point, such that~~
 
 ### Necessary Deliverables
 * ~~A Git repository hosted on GitHub.~~
-* Around 70 commits (or more) on GitHub, dating back to the very beginning of the project. (Commit early, commit often. Tell a story with your commits. Each message should give a clear idea of what you changed.)
+* ~~Around 70 commits (or more) on GitHub, dating back to the very beginning of the project. (Commit early, commit often. Tell a story with your commits. Each message should give a clear idea of what you changed.)~~
 * A README.md file with:
 Explanations of the machineries used.
 * A couple of paragraphs about the general approach you took.
