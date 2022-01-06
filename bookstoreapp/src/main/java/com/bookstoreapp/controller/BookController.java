@@ -2,8 +2,12 @@ package com.bookstoreapp.controller;
 
 import com.bookstoreapp.model.Book;
 import com.bookstoreapp.model.Author;
+import com.bookstoreapp.model.Genre;
+import com.bookstoreapp.model.Publisher;
 import com.bookstoreapp.repository.BookRepository;
 import com.bookstoreapp.repository.AuthorRepository;
+import com.bookstoreapp.repository.GenreRepository;
+import com.bookstoreapp.repository.PublisherRepository;
 import com.bookstoreapp.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,9 +20,11 @@ import java.util.Optional;
 public class BookController {
 
     //creating an instance of the book repo
-    private BookRepository bookRepository;
     private BookService bookService;
+    private BookRepository bookRepository;
     private AuthorRepository authorRepository;
+    private GenreRepository genreRepository;
+    private PublisherRepository publisherRepository;
 
     //autowiring --> you to inject the object dependency implicitly
     @Autowired
@@ -30,10 +36,10 @@ public class BookController {
     public void setAuthorRepository(AuthorRepository authorRepository) { this.authorRepository = authorRepository;
     }
 
-//    @Autowired
-//    public void setGenreRepository(GenreRepository genreRepository){
-//        this.genreRepository = genreRepository;
-//    }
+    @Autowired
+    public void setGenreRepository(GenreRepository genreRepository){
+        this.genreRepository = genreRepository;
+    }
 //
 //    @Autowired
 //    public void setPublisherRepository(publisherRepository publisherRepository){
@@ -87,9 +93,9 @@ public class BookController {
     }
 
 
-//===========================================================================================================
+//===========================================Author================================================================
 
-                    // Authors' endpoints
+
 // get all authors
     @GetMapping("/authors")
     public List<Author> getAuthors() {
@@ -130,17 +136,94 @@ public class BookController {
 
 
 
+//===========================================Genre================================================================
 
-    //1 -> GET all books by an author http://localhost:9092/api/books/{bookId}/authors
-    @GetMapping("/books/{bookId}/authors")
-    public List<Author> getBookAuthors(@PathVariable(value = "bookId") Long bookId) {
-        System.out.println(" calling getBookAuthors ==> ");
-        return bookService.getBookAuthors(bookId);
+//// get all genres
+    @GetMapping("/genres")
+    public List<Genre> getGenres() {
+        System.out.println(" calling getGenres ==> ");
+        return bookService.getGenres();
+    }
+    // get a single genre
+    @GetMapping("/genres/{genreId}")
+    public Optional getGenre(@PathVariable Long genreId) {
+        System.out.println(" calling getGenre ==> ");
+        return bookService.getGenre(genreId);
+    }
+
+    // create a single genre
+    @PostMapping(path="/genres/")
+    public Genre createGenre(@RequestBody Genre genreObject) {
+        System.out.println("calling createGenre ==> ");
+        return bookService.createGenre(genreObject);
+    }
+
+// update an author  http://localhost:9092/api/genres/1
+
+    @PutMapping(path = "/genres/{genreId}")
+    public Genre updateGenre(@PathVariable(
+            value = "genreId") Long genreId, @RequestBody Genre genreObject) {
+        System.out.println("calling updateGenre ==> ");
+        return bookService.updateGenre(genreId, genreObject);
     }
 
 
-  }
+    //  DELETE a author  http://localhost:9092/api/genres/1
+    @DeleteMapping(path = "/genres/{genreId}")
+    public Optional<Genre> deleteGenre(@PathVariable(value = "genreId") Long genreId) {
+        System.out.println("calling deleteGenre ==> ");
+        return bookService.deleteGenre(genreId);
+    }
 
+
+//============================================Publisher================================================================
+// Authors' endpoints
+// get all authors
+//@GetMapping("/authors")
+//public List<Author> getAuthors() {
+//    System.out.println(" calling getAuthors ==> ");
+//    return bookService.getAuthors();
+//}
+//    // get a single author
+//    @GetMapping("/authors/{authorId}")
+//    public Optional getAuthor(@PathVariable Long authorId) {
+//        System.out.println(" calling getAuthor ==> ");
+//        return bookService.getAuthor(authorId);
+//    }
+//
+//    // create a single author
+//    @PostMapping(path="/authors/")
+//    public Author createAuthor(@RequestBody Author authorObject) {
+//        System.out.println("calling createAuthor ==> ");
+//        return bookService.createAuthor(authorObject);
+//    }
+//
+//// update an author  http://localhost:9092/api/authors/1
+//
+//    @PutMapping(path = "/authors/{authorId}")
+//    public Author updateAuthor(@PathVariable(
+//            value = "authorId") Long authorId, @RequestBody Author authorObject) {
+//        System.out.println("calling updateAuthor ==> ");
+//        return bookService.updateAuthor(authorId, authorObject);
+//    }
+//
+//
+//    //  DELETE a author  http://localhost:9092/api/books/1
+//    @DeleteMapping(path = "/authors/{authorId}")
+//    public Optional<Author> deleteAuthor(@PathVariable(value = "authorId") Long authorId) {
+//        System.out.println("calling deleteAuthor ==> ");
+//        return bookService.deleteAuthor(authorId);
+//    }
+
+
+
+}
+//1 -> GET all books by an author http://localhost:9092/api/books/{bookId}/authors
+//    @GetMapping("/books/{bookId}/authors")
+//    public List<Author> getBookAuthors(@PathVariable(value = "bookId") Long bookId) {
+//        System.out.println(" calling getBookAuthors ==> ");
+//        return bookService.getBookAuthors(bookId);
+//    }
 
 
 
