@@ -14,18 +14,16 @@ import com.bookstoreapp.repository.GenreRepository;
 import com.bookstoreapp.repository.PublisherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
-import java.util.logging.Logger;
+
 
 
 @Service
 public class BookService {
-    private static final Logger LOGGER = Logger.getLogger(BookController.class.getName());
 
 
-    private static BookRepository bookRepository;
+    private BookRepository bookRepository;
 
 
     @Autowired
@@ -59,7 +57,7 @@ public class BookService {
 
     //1 -> GET all books  http://localhost:9092/api/books/
     public List<Book> getBooks() {
-        LOGGER.info("service calling getBook==>");
+        System.out.println("service calling getBook==>");
         return bookRepository.findAll();
     }
 
@@ -79,7 +77,7 @@ public class BookService {
         System.out.println("service calling createBook ==>");
         Book book = bookRepository.findByTitle(bookObject.getTitle());
         if (book != null) {
-            throw new InformationNotFoundException("book with name " + book.getTitle() + " already exists");
+            throw new InformationExistException("book with name " + book.getTitle() + " already exists");
         } else {
 
             return bookRepository.save(bookObject);
@@ -116,6 +114,77 @@ public class BookService {
             return book;
         } else {
             throw new InformationNotFoundException("book with id: " + bookId + " not found");
+        }
+    }
+
+// ===============================================AUTHOR=========================================================
+// get all authors http://localhost:9092/api/authors/
+    public List<Author> getAuthors() {
+        System.out.println("service calling getBook==>");
+        return authorRepository.findAll();
+    }
+// get a single author http://localhost:9092/api/authors/1
+    public Optional getAuthor(Long authorId) {
+        System.out.println("service calling getAuthor==>");
+        Optional author = authorRepository.findById(authorId);
+        if (author.isPresent()) {
+            return author;
+        } else {
+            throw new InformationNotFoundException("author with id " + authorId + " not found");
+        }
+    }
+// create a single author http://localhost:9092/api/authors/
+        public Author createAuthor(Author authorObject) {
+        System.out.println("service calling createAuthor ==>");
+        Author author = authorRepository.findByLastName(authorObject.getLastName());
+
+        if (author != null) {
+            throw new InformationExistException("author with name " + author.getLastName() + " already exists");
+
+        } else {
+
+            return authorRepository.save(authorObject);
+        }
+
+    }
+
+    public Author updateAuthor(Long authorId, Author authorObject) {
+        System.out.println("service calling updateAuthor method ==> ");
+        Optional<Author> author = authorRepository.findById(authorId);
+        if (author.isPresent()) {
+            if (authorObject.getLastName().equals(author.get().getLastName())) {
+                throw new InformationExistException("author with id " + author.get().getLastName() + " already exist");
+            } else {
+                Author updateAuthor = authorRepository.findById(authorId).get();
+                updateAuthor.setLastName(authorObject.getLastName());
+                updateAuthor.setFirstName(authorObject.getFirstName());
+                updateAuthor.setBook(authorObject.getBook());
+                return authorRepository.save(updateAuthor);
+            }
+        } else {
+            throw new InformationNotFoundException("author with id " + authorId + " not found");
+        }
+
+    }
+    //Delete a book  http://localhost:9092/api/author/1
+    public Optional<Author> deleteAuthor(Long authorId) {
+        System.out.println("calling deleteAuthor method ==>");
+        Optional<Author> author = authorRepository.findById(authorId);
+        if (author.isPresent()) {
+            authorRepository.deleteById(authorId);
+            return author;
+        } else {
+            throw new InformationNotFoundException("author with id: " + authorId + " not found");
+        }
+    }
+    //get all book by authors
+    public List<Author> getBookAuthors(Long bookId) {
+        System.out.println("service calling getBookAuthors ==>");
+        Optional<Book> book = bookRepository.findById(bookId);
+        if (book.isPresent()) {
+            return book.get().getAuthorList();
+        } else {
+            throw new InformationNotFoundException("book with id " + bookId + " not found");
         }
     }
 }
