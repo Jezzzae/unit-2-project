@@ -57,7 +57,10 @@ The way we first came about approaching our project started off rocky- We tried 
 *
 
 #### Machineries Used
-*
+* Service Class talks to The Controller which talks to the Repository
+* Postman --> We used postman(API platform) to help us test and build our endpoints
+* PgAdmin --> we used pgadmins sources to help us interact with our databases in viewing our tables that we built
+* IntelliJ --> worked inside of intelliJ wrtitng code to create our monolithic back-end. Within intelliJ we were able to sync up to springboot in order to use tomcat to run our application.
 
 ##### Endpoints
 ![Endpoints1](https://user-images.githubusercontent.com/87440131/148090619-c19d091c-79a9-4c27-8eef-c25fe6782682.jpg)
