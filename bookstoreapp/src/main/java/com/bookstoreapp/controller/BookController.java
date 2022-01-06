@@ -177,43 +177,42 @@ public class BookController {
 
 
 //============================================Publisher================================================================
-// Authors' endpoints
-// get all authors
-//@GetMapping("/authors")
-//public List<Author> getAuthors() {
-//    System.out.println(" calling getAuthors ==> ");
-//    return bookService.getAuthors();
-//}
-//    // get a single author
-//    @GetMapping("/authors/{authorId}")
-//    public Optional getAuthor(@PathVariable Long authorId) {
-//        System.out.println(" calling getAuthor ==> ");
-//        return bookService.getAuthor(authorId);
-//    }
-//
-//    // create a single author
-//    @PostMapping(path="/authors/")
-//    public Author createAuthor(@RequestBody Author authorObject) {
-//        System.out.println("calling createAuthor ==> ");
-//        return bookService.createAuthor(authorObject);
-//    }
-//
-//// update an author  http://localhost:9092/api/authors/1
-//
-//    @PutMapping(path = "/authors/{authorId}")
-//    public Author updateAuthor(@PathVariable(
-//            value = "authorId") Long authorId, @RequestBody Author authorObject) {
-//        System.out.println("calling updateAuthor ==> ");
-//        return bookService.updateAuthor(authorId, authorObject);
-//    }
-//
-//
-//    //  DELETE a author  http://localhost:9092/api/books/1
-//    @DeleteMapping(path = "/authors/{authorId}")
-//    public Optional<Author> deleteAuthor(@PathVariable(value = "authorId") Long authorId) {
-//        System.out.println("calling deleteAuthor ==> ");
-//        return bookService.deleteAuthor(authorId);
-//    }
+// get all publisher
+@GetMapping("/publishers")
+public List<Publisher> getPublishers() {
+    System.out.println(" calling getPublishers ==> ");
+    return bookService.getPublishers();
+}
+ //    get a single publisher
+    @GetMapping("/publishers/{publisherId}")
+    public Optional getPublisher(@PathVariable Long publisherId) {
+        System.out.println(" calling getPublisher ==> ");
+        return bookService.getPublisher(publisherId);
+    }
+
+    // create a single publisher http://localhost:9092/api/publishers/1
+    @PostMapping(path="/publishers/")
+    public Publisher createPublisher(@RequestBody Publisher publisherObject) {
+        System.out.println("calling createPublisher ==> ");
+        return bookService.createPublisher(publisherObject);
+    }
+
+// update an author http://localhost:9092/api/publishers/1
+
+    @PutMapping(path = "/publishers/{publisherId}")
+    public Publisher updatePublisher(@PathVariable(
+            value = "publisherId") Long publisherId, @RequestBody Publisher publisherObject) {
+        System.out.println("calling updatePublisher ==> ");
+        return bookService.updatePublisher(publisherId, publisherObject);
+    }
+
+
+    //  DELETE a author  http://localhost:9092/api/publishers/1
+    @DeleteMapping(path = "/publishers/{publisherId}")
+    public Optional<Publisher> deletePublisher(@PathVariable(value = "publisherId") Long publisherId) {
+        System.out.println("calling deletePublisher ==> ");
+        return bookService.deletePublisher(publisherId);
+    }
 
 
 
