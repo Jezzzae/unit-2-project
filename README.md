@@ -48,7 +48,7 @@ Explanations of the machineries used.
 
 
 #### Approach
-The way we first came about approaching our project started off rocky- We tried to divide and conquer tasks but very soon learned that was not the best way to work for us. After our struggles with that we started to join our efforts to work on the same problems this was more efficient for us because altough it seemed like it would take more time this method allowed us both to understand the concepts better by disscusing them as we went by. 
+The way we first came about approaching our project started off rocky- We tried to divide and conquer tasks but very soon learned that was not the best way to work for us. After our struggles with that we started to join our efforts to work on the same problems this was more efficient for us because altough it seemed like it would take more time this method allowed us both to understand the concepts better by disscusing them as we went by. We tried to divide the workload of the project amoung us into certain days as seen below for example on monday we were dedicated to setting up the Spring enviroment which we finished before the end of the day. Then after we started tuesdays workload which is where we started to fall behind on because as demonstrated below there where more objectives to be met and as said before our way of working up until the end of tuesday was still divide and conquer. Once we started working in sync we approached each day with objectives that were put in place and personally curated for our team by our squad leader to help us stay on track.
 
 
 
