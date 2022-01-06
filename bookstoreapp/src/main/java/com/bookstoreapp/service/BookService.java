@@ -1,6 +1,7 @@
 package com.bookstoreapp.service;
 
 
+import com.bookstoreapp.controller.BookController;
 import com.bookstoreapp.exception.InformationExistException;
 import com.bookstoreapp.exception.InformationNotFoundException;
 import com.bookstoreapp.model.Author;
@@ -15,12 +16,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
-
+import java.util.logging.Logger;
 
 
 @Service
-public class BookService {
-
+public class BookService { private static final Logger LOGGER = Logger.getLogger(BookController.class.getName());
 
     private BookRepository bookRepository;
 
@@ -57,13 +57,13 @@ public class BookService {
     // ===============================================Book=========================================================
     //1 -> GET all books  http://localhost:9092/api/books/
     public List<Book> getBooks() {
-        System.out.println("service calling getBook==>");
+        LOGGER.info("service calling getBook==>");
         return bookRepository.findAll();
     }
 
     //2 -> Get one book http://localhost:9092/api/books/1
     public Optional getBook(Long bookId) {
-        System.out.println("service calling getBook==>");
+        LOGGER.info("service calling getBook==>");
         Optional book = bookRepository.findById(bookId);
         if (book.isPresent()) {
             return book;
@@ -74,7 +74,7 @@ public class BookService {
 
     //3 -> CREATE a book  http://localhost:9092/api/books/
     public Book createBook(Book bookObject) {
-        System.out.println("service calling createBook ==>");
+        LOGGER.info("service calling createBook ==>");
         Book book = bookRepository.findByTitle(bookObject.getTitle());
         if (book != null) {
             throw new InformationExistException("book with name " + book.getTitle() + " already exists");
@@ -86,7 +86,7 @@ public class BookService {
 
     //4 - > UPDATE a book  http://localhost:9092/api/books/1
     public Book updateBook(Long bookId, Book bookObject) {
-        System.out.println("service calling updateBook method ==> ");
+        LOGGER.info("service calling updateBook method ==> ");
         Optional<Book> book = bookRepository.findById(bookId);
         if (book.isPresent()) {
             if (bookObject.getTitle().equals(book.get().getTitle())) {
@@ -107,7 +107,7 @@ public class BookService {
 
     //5 - > DELETE a book  http://localhost:9092/api/books/1
     public Optional<Book> deleteBook(Long bookId) {
-        System.out.println("calling deleteBook method ==>");
+        LOGGER.info("calling deleteBook method ==>");
         Optional<Book> book = bookRepository.findById(bookId);
         if (book.isPresent()) {
             bookRepository.deleteById(bookId);
@@ -125,13 +125,13 @@ public class BookService {
     // ===============================================AUTHOR=========================================================
 // get all authors http://localhost:9092/api/authors/
     public List<Author> getAuthors() {
-        System.out.println("service calling getBook==>");
+        LOGGER.info("service calling getBook==>");
         return authorRepository.findAll();
     }
 
     // get a single author http://localhost:9092/api/authors/1
     public Optional getAuthor(Long authorId) {
-        System.out.println("service calling getAuthor==>");
+        LOGGER.info("service calling getAuthor==>");
         Optional author = authorRepository.findById(authorId);
         if (author.isPresent()) {
             return author;
@@ -142,7 +142,7 @@ public class BookService {
 
     // create a single author http://localhost:9092/api/authors/
     public Author createAuthor(Author authorObject) {
-        System.out.println("service calling createAuthor ==>");
+        LOGGER.info("service calling createAuthor ==>");
         Author author = authorRepository.findByLastName(authorObject.getLastName());
 
         if (author != null) {
@@ -156,7 +156,7 @@ public class BookService {
     }
  //   UPDATE author  http://localhost:9092/api/authors/1
     public Author updateAuthor(Long authorId, Author authorObject) {
-        System.out.println("service calling updateAuthor method ==> ");
+        LOGGER.info("service calling updateAuthor method ==> ");
         Optional<Author> author = authorRepository.findById(authorId);
         if (author.isPresent()) {
             if (authorObject.getLastName().equals(author.get().getLastName())) {
@@ -176,7 +176,7 @@ public class BookService {
 
     //Delete a author http://localhost:9092/api/author/1
     public Optional<Author> deleteAuthor(Long authorId) {
-        System.out.println("calling deleteAuthor method ==>");
+        LOGGER.info("calling deleteAuthor method ==>");
         Optional<Author> author = authorRepository.findById(authorId);
         if (author.isPresent()) {
             authorRepository.deleteById(authorId);
@@ -188,7 +188,7 @@ public class BookService {
 
 // get author by book  /author/{authorId}books
 public List<Author> getAuthorBooks(Long authorId) {
-    System.out.println("service calling getAuthorBooks ==>");
+    LOGGER.info("service calling getAuthorBooks ==>");
     Optional<Book> book = bookRepository.findById(authorId);
     if (book.isPresent()) {
         return book.get().getAuthorList();
@@ -197,7 +197,7 @@ public List<Author> getAuthorBooks(Long authorId) {
     }
 }
 //    public Author getAuthorBook(Long authorId, Long bookId) {
-//        System.out.println("service calling getAuthorBook ==>");
+//        LOGGER.info("service calling getAuthorBook ==>");
 //        Optional<Author> author = authorRepository.findById(authorId);
 //        if (author.isPresent()) {
 //            Optional<Book> book = bookRepository.findById(bookId).stream().filter(
@@ -214,7 +214,7 @@ public List<Author> getAuthorBooks(Long authorId) {
 
     // get author by genre  /author/{authorId}genres
     public List<Author> getAuthorGenres(Long authorId) {
-        System.out.println("service calling getAuthorGenres ==>");
+        LOGGER.info("service calling getAuthorGenres ==>");
         Optional<Genre> genre = genreRepository.findById(authorId);
         if (genre.isPresent()) {
             return genre.get().getBook().getAuthorList();
@@ -224,7 +224,7 @@ public List<Author> getAuthorBooks(Long authorId) {
     }
     // get author by Publisher /author/{authorId}publishers
     public List<Author> getAuthorPublishers(Long authorId) {
-        System.out.println("service calling getAuthorPublishers ==>");
+        LOGGER.info("service calling getAuthorPublishers ==>");
         Optional<Publisher> publisher = publisherRepository.findById(authorId);
         if (publisher.isPresent()) {
             return  publisher.get().getBook().getAuthorList();
@@ -237,13 +237,13 @@ public List<Author> getAuthorBooks(Long authorId) {
     // ===============================================Genre=========================================================
 // get all Genres http://localhost:9092/api/genres/
     public List<Genre> getGenres() {
-        System.out.println("service calling getGenre==>");
+        LOGGER.info("service calling getGenre==>");
         return genreRepository.findAll();
     }
 
     // get a single genre http://localhost:9092/api/genres/1
     public Optional getGenre(Long genreId) {
-        System.out.println("service calling getGenre==>");
+        LOGGER.info("service calling getGenre==>");
         Optional genre = genreRepository.findById(genreId);
         if (genre.isPresent()) {
             return genre;
@@ -254,7 +254,7 @@ public List<Author> getAuthorBooks(Long authorId) {
 
     // create a single genre http://localhost:9092/api/genres/
     public Genre createGenre(Genre genreObject) {
-        System.out.println("service calling createGenre ==>");
+        LOGGER.info("service calling createGenre ==>");
         Genre genre = genreRepository.findByName(genreObject.getName());
 
         if (genre != null) {
@@ -268,7 +268,7 @@ public List<Author> getAuthorBooks(Long authorId) {
     }
 // UPDATE a genre http://localhost:9092/api/genres/1
     public Genre updateGenre(Long genreId, Genre genreObject) {
-        System.out.println("service calling updateGenre method ==> ");
+        LOGGER.info("service calling updateGenre method ==> ");
         Optional<Genre> genre = genreRepository.findById(genreId);
         if (genre.isPresent()) {
             if (genreObject.getName().equals(genre.get().getName())) {
@@ -288,7 +288,7 @@ public List<Author> getAuthorBooks(Long authorId) {
 
     //Delete a genre http://localhost:9092/api/genres/1
     public Optional<Genre> deleteGenre(Long genreId) {
-        System.out.println("calling deleteGenre method ==>");
+        LOGGER.info("calling deleteGenre method ==>");
         Optional<Genre> genre = genreRepository.findById(genreId);
         if (genre.isPresent()) {
            genreRepository.deleteById(genreId);
@@ -302,14 +302,13 @@ public List<Author> getAuthorBooks(Long authorId) {
 // ===============================================Publisher=========================================================
 // get all authors http://localhost:9092/api/publishers/
     public List<Publisher> getPublishers() {
-        System.out.println("service calling getPublisher ==>");
-        System.out.println("service calling getPublisher ==>");
+        LOGGER.info("service calling getPublisher ==>");
         return publisherRepository.findAll();
     }
 
     // get a single author http://localhost:9092/api/publishers/1
     public Optional getPublisher(Long publisherId) {
-        System.out.println("service calling getPublisher ==>");
+        LOGGER.info("service calling getPublisher ==>");
         Optional publisher = publisherRepository.findById(publisherId);
         if (publisher.isPresent()) {
             return publisher;
@@ -320,8 +319,8 @@ public List<Author> getAuthorBooks(Long authorId) {
 
     // create a single author http://localhost:9092/api/publishers/
     public Publisher createPublisher(Publisher publisherObject) {
-        System.out.println("service calling createPublisher ==>");
-       Publisher publisher = publisherRepository.findByPublisherName(publisherObject.getPublisherName());
+        LOGGER.info("service calling createPublisher ==>");
+        Publisher publisher = publisherRepository.findByPublisherName(publisherObject.getPublisherName());
 
         if (publisher != null) {
             throw new InformationExistException("publisher with name " + publisher.getPublisherName() + " already exists");
@@ -332,9 +331,13 @@ public List<Author> getAuthorBooks(Long authorId) {
         }
 
     }
+
+
+
+
 //UPDATE a publisher http://localhost:9092/api/publishers/1
     public Publisher updatePublisher(Long publisherId, Publisher publisherObject) {
-        System.out.println("service calling updatePublisher method ==> ");
+        LOGGER.info("service calling updatePublisher method ==> ");
         Optional<Publisher> publisher = publisherRepository.findById(publisherId);
         if (publisher.isPresent()) {
             if (publisherObject.getPublisherName().equals(publisher.get().getPublisherName())) {
@@ -353,7 +356,7 @@ public List<Author> getAuthorBooks(Long authorId) {
 
     //Delete a book  http://localhost:9092/api/publishers/1
     public Optional<Publisher> deletePublisher(Long publisherId) {
-        System.out.println("calling deletePublisher method ==>");
+        LOGGER.info("calling deletePublisher method ==>");
         Optional<Publisher> publisher = publisherRepository.findById(publisherId);
         if (publisher.isPresent()) {
             publisherRepository.deleteById(publisherId);
@@ -366,7 +369,7 @@ public List<Author> getAuthorBooks(Long authorId) {
 }
 //get all book by authors
 //    public List<Author> getBookAuthors(Long bookId) {
-//        System.out.println("service calling getBookAuthors ==>");
+//        LOGGER.info("service calling getBookAuthors ==>");
 //        Optional<Book> book = bookRepository.findById(bookId);
 //        if (book.isPresent()) {
 //            return book.get().getAuthorList();
