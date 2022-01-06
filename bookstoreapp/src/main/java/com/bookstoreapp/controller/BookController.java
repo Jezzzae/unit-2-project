@@ -4,12 +4,6 @@ import com.bookstoreapp.model.Book;
 import com.bookstoreapp.model.Author;
 import com.bookstoreapp.model.Genre;
 import com.bookstoreapp.model.Publisher;
-import com.bookstoreapp.repository.BookRepository;
-import com.bookstoreapp.repository.AuthorRepository;
-import com.bookstoreapp.repository.GenreRepository;
-import com.bookstoreapp.repository.PublisherRepository;
-//import org.springframework.http.HttpStatus;
-//import org.springframework.http.ResponseEntity;
 import com.bookstoreapp.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,46 +18,19 @@ import java.util.logging.Logger;
 @RequestMapping(path = "/api")
 public class BookController {
     private static final Logger LOGGER = Logger.getLogger(BookController.class.getName());
-    //creating an instance of the book repo
     private BookService bookService;
-//    private BookRepository bookRepository;
-//    private AuthorRepository authorRepository;
-//    private GenreRepository genreRepository;
-//    private PublisherRepository publisherRepository;
 
-    //autowiring --> you to inject the object dependency implicitly
-//    @Autowired
-//    public void setBookRepository(BookRepository bookRepository) {
-//        this.bookRepository = bookRepository;
-//    }
-//
-//    @Autowired
-//    public void setAuthorRepository(AuthorRepository authorRepository) {
-//        this.authorRepository = authorRepository;
-//    }
-//
-//    @Autowired
-//    public void setGenreRepository(GenreRepository genreRepository) {
-//        this.genreRepository = genreRepository;
-//    }
-//
-//    @Autowired
-//    public void setPublisherRepository(PublisherRepository publisherRepository) {
-//        this.publisherRepository = publisherRepository;
-//    }
-//
-//
-//
     @Autowired
     public void setBookService(BookService bookService) {
         this.bookService = bookService;
     }
-    //create the four endpoints
+                            //create the four endpoints
 
-    //1 -> GET all books  http://localhost:9092/api/books/
+    //1 -> GET all books  http://localhost:9092/api/books
     @GetMapping("/books")
     public List<Book> getBooks() {
         LOGGER.info(" calling getBooks method from controller");
+
         return bookService.getBooks();
     }
 
@@ -74,8 +41,8 @@ public class BookController {
         return bookService.getBook(bookId);
     }
 
-    //postman??
-    //3 -> CREATE a book  http://localhost:9092/api/books/
+
+    //3 -> CREATE a book  http://localhost:9092/api/books
     @PostMapping(path = "/books/")
     public Book createBook(@RequestBody Book bookObject) {
         LOGGER.info("calling createBook method from controller ");
@@ -167,10 +134,6 @@ public class BookController {
         return bookService.createGenre(bookId, genreObject);
     }
 
-//    @PostMapping(path = "/books/{bookId}/authors")
-//    public Author createAuthor(@PathVariable Long bookId, @RequestBody Author authorObject) {
-//        LOGGER.info("calling createAuthor method from controller");
-//        return bookService.createAuthor(bookId, authorObject);
 
 // update an genre  http://localhost:9092/api/genres/1
 
@@ -189,38 +152,6 @@ public class BookController {
         return bookService.deleteGenre(genreId);
     }
 
-    // get author by book /author/{authorId}books
-    @GetMapping("/authors/{authorId}/books")
-    public List<Author> getAuthorBooks(@PathVariable(value = "authorId") Long authorId) {
-        LOGGER.info("calling getAuthorBooks method from controller");
-        return bookService.getAuthorBooks(authorId);
-
-    }
-
-/*
-    @GetMapping("/authors/{authorId}/books/{bookId}")
-    public Book getAuthorBook(
-            @PathVariable(value = "authorId") Long authorId, @PathVariable(value = "bookId") Long bookId) {
-       LOGGER.info("calling getAuthorBook method from controller");
-        return bookService.getAuthorBook(authorId, bookId);
-    }
-*/
-
-
-    // get author by genre /author/{authorId}genres
-    @GetMapping("/authors/{authorId}/genres")
-    public List<Author> getAuthorGenres(@PathVariable(value = "authorId") Long authorId) {
-        LOGGER.info("calling getAuthorGenres method from controller");
-        return bookService.getAuthorGenres(authorId);
-    }
-
-    // get author by genre /author/{authorId}publishers
-    @GetMapping("/authors/{authorId}/publishers")
-    public List<Author> getAuthorPublishers(@PathVariable(value = "authorId") Long authorId) {
-        LOGGER.info("calling getAuthorPublishers method from controller");
-        return bookService.getAuthorPublishers(authorId);
-
-    }
 
     //============================================Publisher================================================================
 // get all publisher
@@ -237,14 +168,16 @@ public class BookController {
         return bookService.getPublisher(publisherId);
     }
 
-    // create a single publisher http://localhost:9092/api/publishers/1
-    @PostMapping(path = "/publishers/")
-    public Publisher createPublisher(@RequestBody Publisher publisherObject) {
+    // create a single publisher http://localhost:9092/api/books/{bookId}/publishers
+    @PostMapping(path = "/books/{bookId}/publishers")
+    public Publisher createPublisher(@PathVariable Long bookId, @RequestBody Publisher publisherObject) {
         LOGGER.info("calling createPublisher method from controller");
-        return bookService.createPublisher(publisherObject);
+        return bookService.createPublisher(bookId, publisherObject);
     }
 
-// update an author http://localhost:9092/api/publishers/1
+
+
+// update a publisher http://localhost:9092/api/publishers/1
 
     @PutMapping(path = "/publishers/{publisherId}")
     public Publisher updatePublisher(@PathVariable(
@@ -254,7 +187,7 @@ public class BookController {
     }
 
 
-    //  DELETE a author  http://localhost:9092/api/publishers/1
+    //  DELETE a publisher http://localhost:9092/api/publishers/1
     @DeleteMapping(path = "/publishers/{publisherId}")
     public Optional<Publisher> deletePublisher(@PathVariable(value = "publisherId") Long publisherId) {
         LOGGER.info("calling deletePublisher method from controller");
@@ -264,13 +197,6 @@ public class BookController {
 
 
 }
-//1 -> GET all books by an author http://localhost:9092/api/books/{bookId}/authors
-//    @GetMapping("/books/{bookId}/authors")
-//    public List<Author> getBookAuthors(@PathVariable(value = "bookId") Long bookId) {
-//        LOGGER.info(" calling getBookAuthors method from controller");
-//        return bookService.getBookAuthors(bookId);
-//    }
-
 
 
 
