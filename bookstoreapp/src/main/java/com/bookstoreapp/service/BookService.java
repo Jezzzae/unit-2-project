@@ -79,8 +79,8 @@ public class BookService { private static final Logger LOGGER = Logger.getLogger
         if (book != null) {
             throw new InformationExistException("book with name " + book.getTitle() + " already exists");
         } else {
-
             return bookRepository.save(bookObject);
+//
         }
     }
 
@@ -88,20 +88,15 @@ public class BookService { private static final Logger LOGGER = Logger.getLogger
     public Book updateBook(Long bookId, Book bookObject) {
         LOGGER.info("service calling updateBook method ==> ");
         Optional<Book> book = bookRepository.findById(bookId);
-        if (book.isPresent()) {
-            if (bookObject.getTitle().equals(book.get().getTitle())) {
-                throw new InformationExistException("book with name " + book.get().getTitle() + " already exist");
-            } else {
-                Book updateBook = bookRepository.findById(bookId).get();
-                updateBook.setTitle(bookObject.getTitle());
-                updateBook.setAuthorList(bookObject.getAuthorList());
-                updateBook.setGenreList(bookObject.getGenreList());
-                updateBook.setPublisherList(bookObject.getPublisherList());
-                return bookRepository.save(updateBook);
-            }
-        } else {
+        if (book == null) {
             throw new InformationNotFoundException("book with id " + bookId + " not found");
-        }
+
+
+            } else {
+                book.get().setTitle(bookObject.getTitle());
+                return bookRepository.save(book.get());
+
+            }
 
     }
 
@@ -300,13 +295,13 @@ public List<Author> getAuthorBooks(Long authorId) {
 
 
 // ===============================================Publisher=========================================================
-// get all authors http://localhost:9092/api/publishers/
+// get all publishers http://localhost:9092/api/publishers/
     public List<Publisher> getPublishers() {
         LOGGER.info("service calling getPublisher ==>");
         return publisherRepository.findAll();
     }
 
-    // get a single author http://localhost:9092/api/publishers/1
+    // get a single publisher http://localhost:9092/api/publishers/1
     public Optional getPublisher(Long publisherId) {
         LOGGER.info("service calling getPublisher ==>");
         Optional publisher = publisherRepository.findById(publisherId);
@@ -317,7 +312,7 @@ public List<Author> getAuthorBooks(Long authorId) {
         }
     }
 
-    // create a single author http://localhost:9092/api/publishers/
+    // create a single publisher http://localhost:9092/api/publishers/
     public Publisher createPublisher(Publisher publisherObject) {
         LOGGER.info("service calling createPublisher ==>");
         Publisher publisher = publisherRepository.findByPublisherName(publisherObject.getPublisherName());
@@ -354,7 +349,7 @@ public List<Author> getAuthorBooks(Long authorId) {
 
     }
 
-    //Delete a book  http://localhost:9092/api/publishers/1
+    //Delete a publisher  http://localhost:9092/api/publishers/1
     public Optional<Publisher> deletePublisher(Long publisherId) {
         LOGGER.info("calling deletePublisher method ==>");
         Optional<Publisher> publisher = publisherRepository.findById(publisherId);
