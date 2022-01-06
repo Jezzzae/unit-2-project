@@ -17,8 +17,8 @@ The Book StoreApp will allow a user to search for a book through a (predefined)d
 ### Necessary Deliverables
 * ~~A Git repository hosted on GitHub.~~
 * ~~Around 70 commits (or more) on GitHub, dating back to the very beginning of the project. (Commit early, commit often. Tell a story with your commits. Each message should give a clear idea of what you changed.)~~
-* A README.md file with:
-Explanations of the machineries used.
+* ~~A README.md file with:
+Explanations of the machineries used.~~
 * ~~A couple of paragraphs about the general approach you took.~~
 * ~~Descriptions of any unsolved problems or major hurdles you had to overcome.~~
 * ~~A link to your planning documentation for how you broke down this project with deliverables and timelines.~~
