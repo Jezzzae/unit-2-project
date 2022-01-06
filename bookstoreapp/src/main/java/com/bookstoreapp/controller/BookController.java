@@ -237,11 +237,13 @@ public class BookController {
         return bookService.getPublisher(publisherId);
     }
 
-    // create a single publisher http://localhost:9092/api/publishers/1
-    @PostMapping(path = "/publishers/")
-    public Publisher createPublisher(@RequestBody Publisher publisherObject) {
+    // create a single publisher http://localhost:9092/api/publishers/1 <-------- old
+    //POST http://localhost:9092/api/books/1/publishers <------- new path
+
+    @PostMapping(path = "/books/{bookId}/publishers/")
+    public Publisher createPublisher(@PathVariable Long bookId,@RequestBody Publisher publisherObject) {
         LOGGER.info("calling createPublisher method from controller");
-        return bookService.createPublisher(publisherObject);
+        return bookService.createPublisher(bookId, publisherObject);
     }
 
 // update an author http://localhost:9092/api/publishers/1
@@ -260,8 +262,6 @@ public class BookController {
         LOGGER.info("calling deletePublisher method from controller");
         return bookService.deletePublisher(publisherId);
     }
-
-
 
 }
 //1 -> GET all books by an author http://localhost:9092/api/books/{bookId}/authors

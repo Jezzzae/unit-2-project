@@ -314,18 +314,17 @@ public class BookService {
         }
     }
 
-    // create a single publisher http://localhost:9092/api/publishers/
-    public Publisher createPublisher(Publisher publisherObject) {
+    // create a single publisher http://localhost:9092/api/books/1/publishers/
+    public Publisher createPublisher(Long bookId, Publisher publisherObject) {
         LOGGER.info("service calling createPublisher ==>");
-        Publisher publisher = publisherRepository.findByPublisherName(publisherObject.getPublisherName());
-
-        if (publisher != null) {
-            throw new InformationExistException("publisher with name " + publisher.getPublisherName() + " already exists");
-
-        } else {
-
+        try {
+            Optional book = bookRepository.findById(bookId);
+            publisherObject.setBook((Book) book.get());
             return publisherRepository.save(publisherObject);
+        }catch (NoSuchElementException e){
+            throw new InformationNotFoundException("book with id " + bookId + " not found");
         }
+//        Publisher publisher = publisherRepository.findByPublisherName(publisherObject.getPublisherName());
 
     }
 
