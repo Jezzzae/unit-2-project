@@ -1,7 +1,6 @@
 package com.bookstoreapp.service;
 
 
-import com.bookstoreapp.controller.BookController;
 import com.bookstoreapp.exception.InformationExistException;
 import com.bookstoreapp.exception.InformationNotFoundException;
 import com.bookstoreapp.model.Author;
@@ -118,6 +117,11 @@ public class BookService {
         }
     }
 
+
+
+    ////  BookBy...
+
+
     // ===============================================AUTHOR=========================================================
 // get all authors http://localhost:9092/api/authors/
     public List<Author> getAuthors() {
@@ -182,6 +186,52 @@ public class BookService {
         }
     }
 
+// get author by book  /author/{authorId}books
+public List<Author> getAuthorBooks(Long authorId) {
+    System.out.println("service calling getAuthorBooks ==>");
+    Optional<Book> book = bookRepository.findById(authorId);
+    if (book.isPresent()) {
+        return book.get().getAuthorList();
+    } else {
+        throw new InformationNotFoundException("author with id " + authorId + " not found");
+    }
+}
+//    public Author getAuthorBook(Long authorId, Long bookId) {
+//        System.out.println("service calling getAuthorBook ==>");
+//        Optional<Author> author = authorRepository.findById(authorId);
+//        if (author.isPresent()) {
+//            Optional<Book> book = bookRepository.findById(bookId).stream().filter(
+//                    p -> p.getId().equals(bookId)).findFirst();
+//            if (book.isEmpty()) {
+//                throw new InformationNotFoundException("book with id " + bookId + " not found");
+//            } else {
+//                return author.get();
+//            }
+//        } else {
+//            throw new InformationNotFoundException("author with id " + authorId + " not found");
+//        }
+//    }
+
+    // get author by genre  /author/{authorId}genres
+    public List<Author> getAuthorGenres(Long authorId) {
+        System.out.println("service calling getAuthorGenres ==>");
+        Optional<Genre> genre = genreRepository.findById(authorId);
+        if (genre.isPresent()) {
+            return genre.get().getBook().getAuthorList();
+        } else {
+            throw new InformationNotFoundException("author with id " + authorId + " not found");
+        }
+    }
+    // get author by Publisher /author/{authorId}publishers
+    public List<Author> getAuthorPublishers(Long authorId) {
+        System.out.println("service calling getAuthorPublishers ==>");
+        Optional<Publisher> publisher = publisherRepository.findById(authorId);
+        if (publisher.isPresent()) {
+            return  publisher.get().getBook().getAuthorList();
+        } else {
+            throw new InformationNotFoundException("author with id " + authorId + " not found");
+        }
+    }
 
 
     // ===============================================Genre=========================================================
@@ -282,7 +332,7 @@ public class BookService {
         }
 
     }
-
+//UPDATE a publisher http://localhost:9092/api/publishers/1
     public Publisher updatePublisher(Long publisherId, Publisher publisherObject) {
         System.out.println("service calling updatePublisher method ==> ");
         Optional<Publisher> publisher = publisherRepository.findById(publisherId);

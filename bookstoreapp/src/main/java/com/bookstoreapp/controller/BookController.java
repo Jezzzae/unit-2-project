@@ -175,8 +175,41 @@ public class BookController {
         return bookService.deleteGenre(genreId);
     }
 
+    // get author by book /author/{authorId}books
+    @GetMapping("/authors/{authorId}/books")
+    public List<Author> getAuthorBooks(@PathVariable(value = "authorId") Long authorId) {
+        System.out.println("calling getAuthorBooks ==> ");
+        return bookService.getAuthorBooks(authorId);
 
-//============================================Publisher================================================================
+    }
+//    @GetMapping("/authors/{authorId}/books/{bookId}")
+//    public Book getAuthorBook(
+//            @PathVariable(value = "authorId") Long authorId, @PathVariable(value = "bookId") Long bookId) {
+//        System.out.println("calling getAuthorbook ==>");
+//        return bookService.getAuthorBook(authorId, bookId);
+//    }
+
+
+    // get author by genre /author/{authorId}genres
+    @GetMapping("/authors/{authorId}/genres")
+    public List<Author> getAuthorGenres(@PathVariable(value = "authorId") Long authorId) {
+        System.out.println("calling getAuthorGenres ==> ");
+        return bookService.getAuthorGenres(authorId);
+    }
+    // get author by genre /author/{authorId}publishers
+    @GetMapping("/authors/{authorId}/publishers")
+    public List<Author> getAuthorPublishers(@PathVariable(value = "authorId") Long authorId) {
+        System.out.println("calling getAuthorPublishers ==> ");
+        return bookService.getAuthorPublishers(authorId);
+
+    }
+//    GET	/api/categories/{categoryId}/recipes
+//    POST	/api/categories/{categoryId}/recipes
+//    GET	/api/categories/{categoryId}/recipes/{recipeId}
+//    PUT	/api/categories/{categoryId}/recipes/{recipeId}
+//    DELETE	/api/categories/{categoryId}/recipes/{recipeId}
+
+    //============================================Publisher================================================================
 // get all publisher
 @GetMapping("/publishers")
 public List<Publisher> getPublishers() {
