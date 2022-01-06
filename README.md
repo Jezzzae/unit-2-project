@@ -44,13 +44,17 @@ Explanations of the machineries used.
 * Getting project approved first day 
 * understanding the scope of our project and implementing that into our erd diagram
 * understanding how to merge and pull / push without causing any more erros
+* In the begining and even close to the middle of the week as a team we struggled to work in sync and this caused problems that directly effected our code for example when merging, pulling,pushing there was always an error that would hold us back again due to us working on files at the same time. The way we solved this was by taking our Squad Leader Suresh's advice and practicing driving & navigating together this way we avoided any unecessary git erros.
+
+
+#### Approach
+The way we first came about approaching our project started off rocky- We tried to divide and conquer tasks but very soon learned that was not the best way to work for us. After our struggles with that we started to join our efforts to work on the same problems this was more efficient for us because altough it seemed like it would take more time this method allowed us both to understand the concepts better by disscusing them as we went by. 
+
+
 
 
 #### Dependencies
 *
-
-#### Approach
-
 
 #### Machineries Used
 *
