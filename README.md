@@ -19,8 +19,8 @@ The Book StoreApp will allow a user to search for a book through a (predefined)d
 * ~~Around 70 commits (or more) on GitHub, dating back to the very beginning of the project. (Commit early, commit often. Tell a story with your commits. Each message should give a clear idea of what you changed.)~~
 * A README.md file with:
 Explanations of the machineries used.
-* A couple of paragraphs about the general approach you took.
-* Descriptions of any unsolved problems or major hurdles you had to overcome.
+* ~~A couple of paragraphs about the general approach you took.~~
+* ~~Descriptions of any unsolved problems or major hurdles you had to overcome.~~
 * ~~A link to your planning documentation for how you broke down this project with deliverables and timelines.~~
 * Installation instructions for any dependencies.
 * ~~A link to your user stories, ERD diagrams — who are your users, what do they want, and why?~~
@@ -44,8 +44,16 @@ Explanations of the machineries used.
 * Getting project approved first day 
 * understanding the scope of our project and implementing that into our erd diagram
 * understanding how to merge and pull / push without causing any more erros
+
+
 #### Dependencies
-* 
+*
+
+#### Approach
+
+
+#### Machineries Used
+*
 
 ##### Endpoints
 ![Endpoints1](https://user-images.githubusercontent.com/87440131/148090619-c19d091c-79a9-4c27-8eef-c25fe6782682.jpg)
