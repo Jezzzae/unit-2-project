@@ -46,13 +46,9 @@ The Book StoreApp will allow a user to search for a book through a (predefined) 
 * understanding how to merge and pull / push without causing any more erros
 * In the begining and even close to the middle of the week as a team we struggled to work in sync and this caused problems that directly effected our code for example when merging, pulling,pushing there was always an error that would hold us back again due to us working on files at the same time. The way we solved this was by taking our Squad Leader Suresh's advice and practicing driving & navigating together this way we avoided any unecessary git erros.
 
-
 #### Approach 🚂
 The way we first came about approaching our project started off rocky- We tried to divide and conquer tasks but very soon learned that was not the best way to work for us. After our struggles with that we started to join our efforts to work on the same problems this was more efficient for us because altough it seemed like it would take more time this method allowed us both to understand the concepts better by disscusing them as we went by. We tried to divide the workload of the project amoung us into certain days as seen below for example on monday we were dedicated to setting up the Spring enviroment which we finished before the end of the day. Then after we started tuesdays workload which is where we started to fall behind on because as demonstrated below there where more objectives to be met and as said before our way of working up until the end of tuesday was still divide and conquer. Once we started working in sync we approached each day with objectives that were put in place and personally curated for our team by our squad leader to help us stay on track.
 
-#### Dependencies
-*
- 
 #### Machineries Used 🧰
 * Service Class talks to The Controller which talks to the Repository
 * LucidCharts website to create our entity relationship models
@@ -61,12 +57,12 @@ The way we first came about approaching our project started off rocky- We tried 
 * IntelliJ --> worked inside of intelliJ wrtitng code to create our monolithic back-end. Within intelliJ we were able to sync up to springboot in order to use tomcat to run our application.
 * Maven --> Helping to building dependencies
 * Spring Boot --> Helped us in the running of our actual project without needing an external webserver - Instead we can use an embedded web server to run it, which in our case we used Tomcat
-##### Endpoints 📌
+### Endpoints 📌
 ![Endpoints1](https://user-images.githubusercontent.com/87440131/148090619-c19d091c-79a9-4c27-8eef-c25fe6782682.jpg)
 ![Endpoints2](https://user-images.githubusercontent.com/87440131/148090637-71497e99-cb71-4c75-abf2-b88fdafa584a.jpg)
-###### ERD 🧑‍🤝‍🧑 👭
+#### ERD 🧑‍🤝‍🧑 👭
 ![ERD with colored entities (UML notation)](https://user-images.githubusercontent.com/87440131/148090715-d84a159d-05e6-468b-86b6-367f8777aa73.png)
-###### Timeline ⏱️
+#### Timeline ⏱️
 |      Tuesday      |      Wednesday     |         Thursday        |     Friday     |Sat - Monday                |
 | ------------------|--------------------|-------------------------|----------------|----------------------------|
 | Setup Spring boot | Create models,     | Complete booklist       |  Make sure MVP | Practice for Presentations |
@@ -74,5 +70,8 @@ The way we first came about approaching our project started off rocky- We tried 
 |                   | & exceptions       | Work on search features |  is functional |                            |
 |                   |                    |                         |  Debugging     |                            |
 
-## INSTRUCTIONS(STEP BY STEP) 🔍 
-*
+
+## INSTRUCTIONS(STEP BY STEP) 🔍 (*Assuming you have already installed pjAdmin, postman & IntelliJ on your machine)
+* Fork & Clone this repo above
+* Open up in IntelliJ
+* Open pgAdmin, create database for books 
