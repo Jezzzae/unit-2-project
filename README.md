@@ -35,17 +35,16 @@ The Book StoreApp will allow a user to search for a book through a (predefined) 
 * Will be able to find a book according to Author
 * Will be able to find a book according to Genre
 * Will be able to find a book according to Publisher
-* Ability able to move favorite books into a List
-* Ability to add, view, update and remove books from list
-* When searching for books by name of author - The author bio, num of books, and series by that author will be displayed.
-* When searching for books by the Genre - Should display the name of genre, and the name of books under that genre
-* When searching for a book under publisher- The publishers' name, the name of authors under publisher, and any books published by that publisher will be displayed
+* Ability to add, view, update and remove a book
+* When searching for books by name of author - The author firstName, lastName, and author_Id by that author will be displayed.
+* When searching for books by the Genre - Should display the name of genre, and the subGenre name of books under that genre
+* When searching for a book under publisher- The publishers_name will be displayed
 
 #### Struggles 🤕
 * Getting project approved first day 
-* understanding the scope of our project and implementing that into our erd diagram
+* understanding the scope of our project and implementing that into our ERD diagram
 * understanding how to merge and pull / push without causing any more erros
-* In the begining and even close to the middle of the week as a team we struggled to work in sync and this caused problems that directly effected our code for example when merging, pulling,pushing there was always an error that would hold us back again due to us working on files at the same time. The way we solved this was by taking our Squad Leader Suresh's advice and practicing driving & navigating together this way we avoided any unecessary git erros.
+* In the begining and even close to the middle of the week as a team we struggled to work in sync and this caused problems that directly effected our code for example when merging, pulling, pushing there was always an error that would hold us back again due to us working on files at the same time. The way we solved this was by taking our Squad Leader Suresh's advice and practicing driving & navigating together this way we avoided any unecessary git erros.
 
 #### Approach 🚂
 The way we first came about approaching our project started off rocky- We tried to divide and conquer tasks but very soon learned that was not the best way to work for us. After our struggles with that we started to join our efforts to work on the same problems this was more efficient for us because altough it seemed like it would take more time this method allowed us both to understand the concepts better by disscusing them as we went by. We tried to divide the workload of the project amoung us into certain days as seen below for example on monday we were dedicated to setting up the Spring enviroment which we finished before the end of the day. Then after we started tuesdays workload which is where we started to fall behind on because as demonstrated below there where more objectives to be met and as said before our way of working up until the end of tuesday was still divide and conquer. Once we started working in sync we approached each day with objectives that were put in place and personally curated for our team by our squad leader to help us stay on track.
@@ -77,7 +76,7 @@ The way we first came about approaching our project started off rocky- We tried 
 ## INSTRUCTIONS(STEP BY STEP) 🔍 (*Assuming you have already installed pjAdmin, postman & IntelliJ on your machine*)
 #### 1. Fork & Clone this repo above
 #### 2. Open up in IntelliJ
-#### 3. Open pgAdmin, create database for books
+#### 3. Open pgAdmin, create database called "bookstoreapp
 #### 4. Query through the database using these statements
 
 ![Screenshot (16)](https://user-images.githubusercontent.com/29801753/148588548-fc6d778c-ae20-46cd-9a74-d3d9406a84c2.png)
