@@ -61,11 +61,10 @@ The way we first came about approaching our project started off rocky- We tried 
 ### Endpoints 📌
 ![Screenshot (14)](https://user-images.githubusercontent.com/29801753/148585525-f7d79745-eb74-4626-956a-3400b6e2b030.png)
 ---
-#### ERD 🧑‍🤝‍🧑 👭
+### ERD 🧑‍🤝‍🧑 👭
 ![ERD with colored entities (UML notation)](https://user-images.githubusercontent.com/87440131/148582815-f10ac238-c8d7-4127-b129-47cff783de29.png)
 ---
-
-#### Timeline ⏱️
+### Timeline ⏱️
 
 |      Tuesday      |      Wednesday     |         Thursday        |     Friday     |       Sat - Monday         |
 | ------------------|--------------------|-------------------------|----------------|----------------------------|
