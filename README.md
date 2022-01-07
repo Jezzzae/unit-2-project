@@ -59,11 +59,10 @@ The way we first came about approaching our project started off rocky- We tried 
 * Spring Boot --> Helped us in the running of our actual project without needing an external webserver - Instead we can use an embedded web server to run it, which in our case we used Tomcat
 ### Endpoints 📌
 ![Screenshot (14)](https://user-images.githubusercontent.com/29801753/148585525-f7d79745-eb74-4626-956a-3400b6e2b030.png)
-
-
+---
 #### ERD 🧑‍🤝‍🧑 👭
 ![ERD with colored entities (UML notation)](https://user-images.githubusercontent.com/87440131/148582815-f10ac238-c8d7-4127-b129-47cff783de29.png)
-
+---
 #### Timeline ⏱️
 |      Tuesday      |      Wednesday     |         Thursday        |     Friday     |Sat - Monday                |
 | ------------------|--------------------|-------------------------|----------------|----------------------------|
@@ -71,8 +70,7 @@ The way we first came about approaching our project started off rocky- We tried 
 | Enviroment        | repos, controller  | functionality.          |  is met & app  |  on Monday                 |
 |                   | & exceptions       | Work on search features |  is functional |                            |
 |                   |                    |                         |  Debugging     |                            |
-
-
+---
 ## INSTRUCTIONS(STEP BY STEP) 🔍 (*Assuming you have already installed pjAdmin, postman & IntelliJ on your machine*)
 * Fork & Clone this repo above
 * Open up in IntelliJ
