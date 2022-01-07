@@ -81,12 +81,24 @@ The way we first came about approaching our project started off rocky- We tried 
 a. <img width="333" alt="Screen Shot 2022-01-07 at 2 43 15 PM" src="https://user-images.githubusercontent.com/87440131/148598628-261c79bc-2eca-4b92-80ab-2d679552a3f4.png">
 b. <img width="602" alt="Screen Shot 2022-01-07 at 2 44 13 PM" src="https://user-images.githubusercontent.com/87440131/148598668-2b6f9c9d-c1af-479f-a682-93b401aa4e25.png">
 
-### 3. Open pgAdmin, create database called "bookstoreapp" 🐘
+### 3. Add the following dependencies to the pom.xml file
+```
+ <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>        
+  ```
+### 4. Open pgAdmin, create database called "bookstoreapp" 🐘
 ![Screenshot (17)](https://user-images.githubusercontent.com/29801753/148600873-9ebdcba2-18bc-42a7-b13e-6d3a5f5667f7.png)
        ![Screenshot (19)](https://user-images.githubusercontent.com/29801753/148600899-127a9a23-9197-4be1-b6c0-8e1aa37174ca.png)
 
 
-### 4. Query through the database using these statements in pgAdmin 🗃
+### 5. Query through the database using these statements in pgAdmin 🗃
 
 ![Screenshot (16)](https://user-images.githubusercontent.com/29801753/148588548-fc6d778c-ae20-46cd-9a74-d3d9406a84c2.png)
 
