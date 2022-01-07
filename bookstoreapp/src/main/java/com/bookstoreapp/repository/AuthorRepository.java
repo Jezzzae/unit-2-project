@@ -9,13 +9,10 @@ import java.util.List;
 public interface AuthorRepository extends JpaRepository<Author, Long> {
 
 
-
-
     List<Author> findByBookId(Long bookId);
 
 
     Author findByLastName(String lastName);
-
 
 
 }

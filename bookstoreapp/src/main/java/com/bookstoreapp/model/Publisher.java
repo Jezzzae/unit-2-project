@@ -19,8 +19,6 @@ public class Publisher {
     private String publisherName;
 
 
-
-
     @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "book_id")

@@ -6,7 +6,6 @@ import javax.persistence.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
-
 @Entity
 @Table(name = "Authors")
 public class Author {
@@ -21,7 +20,6 @@ public class Author {
 
     @Column
     private String lastName;
-
 
 
     @JsonIgnore
