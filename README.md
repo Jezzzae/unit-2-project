@@ -1,22 +1,22 @@
 # unit-2-project 📚
 ## Book Store app Sheree &amp; Jess
 
-The Book StoreApp will allow a user to <mark>search</mark> for a book through a (predefined) database and <mark>save</mark> favorite books into a list that they will also be able to mangage by choosing which books to save, update, read, and remove.
+The Book StoreApp will allow a user to search for a book through a (predefined) database and save favorite books into a list that they will also be able to mangage by choosing which books to save, update, read, and remove.
 
 ### Technical requirements ⚙️
 - [x] Persist at least four models.
 - [x] Use Spring Profiles for environment settings.
 - [x] At least one API endpoint must perform full CRUD create, read, update, and delete actions.
 - [x] Other API endpoints can perform CRUD based on the business use-case.
-- [ ] <mark>Expose CRUD routes that were built using REST conventions.</mark>
+- [ ] Expose CRUD routes that were built using REST conventions.
 - [x] Handle exceptions gracefully.
 - [x] Send appropriate messages back to the client in the event that an exception occurs.
 - [x] Must have Controller and Service separate.
 - [x] Document each end-point, such that
 
 ### Necessary Deliverables 🏁
-- [x] A Git repository hosted on GitHub.~~
-- [x] Around 70 commits (or more) on GitHub, dating back to the very beginning of the project. (Commit early, commit often. Tell a story with your commits. Each message should         give a clear idea of what you changed.)~~
+- [x] A Git repository hosted on GitHub.
+- [x] Around 70 commits (or more) on GitHub, dating back to the very beginning of the project. (Commit early, commit often. Tell a story with your commits. Each message should         give a clear idea of what you changed.)
 - [x] A README.md file with:
 * Explanations of the machineries used.
 * A couple of paragraphs about the general approach you took.
@@ -68,6 +68,11 @@ The way we first came about approaching our project started off rocky- We tried 
 ![ERD with colored entities (UML notation)](https://user-images.githubusercontent.com/87440131/148090715-d84a159d-05e6-468b-86b6-367f8777aa73.png)
 ###### Timeline ⏱️
 ![image](https://user-images.githubusercontent.com/87440131/148092580-acfd1470-5c46-49fa-a921-5a157a2b653d.png)
+
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
 
 ## INSTRUCTIONS(STEP BY STEP) 🔍 
 *
