@@ -274,8 +274,6 @@ public class BookService {
     //18 -> Post/Create a book and add a publisher http://localhost:9092/api/publishers/
     public Publisher createPublisher(Long bookId, Publisher publisherObject) {
         LOGGER.info("service calling createPublisher ==>");
-        Publisher publisher = publisherRepository.findByPublisherName(publisherObject.getPublisherName());
-
         try {
             // here we're trying to find the book
             Optional book = bookRepository.findById(bookId);
