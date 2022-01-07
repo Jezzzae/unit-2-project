@@ -5,25 +5,25 @@ The Book StoreApp will allow a user to search for a book through a (predefined)d
 
 ### Technical requirements
 - [x] Persist at least four models.
-* ~~Use Spring Profiles for environment settings.~~
-* ~~At least one API endpoint must perform full CRUD create, read, update, and delete actions.~~
-* ~~Other API endpoints can perform CRUD based on the business use-case.~~
-* Expose CRUD routes that were built using REST conventions.
-* ~~Handle exceptions gracefully.~~
-* ~~Send appropriate messages back to the client in the event that an exception occurs.~~
-* ~~Must have Controller and Service separate.~~
-* ~~Document each end-point, such that~~
+- [x] Use Spring Profiles for environment settings.
+- [x] At least one API endpoint must perform full CRUD create, read, update, and delete actions.
+- [x] Other API endpoints can perform CRUD based on the business use-case.
+- [ ] Expose CRUD routes that were built using REST conventions.
+- [x] Handle exceptions gracefully.
+- [x] Send appropriate messages back to the client in the event that an exception occurs.
+- [x] Must have Controller and Service separate.
+- [x] Document each end-point, such that
 
 ### Necessary Deliverables
-* ~~A Git repository hosted on GitHub.~~
-* ~~Around 70 commits (or more) on GitHub, dating back to the very beginning of the project. (Commit early, commit often. Tell a story with your commits. Each message should give a clear idea of what you changed.)~~
-* ~~A README.md file with:
-Explanations of the machineries used.~~
-* ~~A couple of paragraphs about the general approach you took.~~
-* ~~Descriptions of any unsolved problems or major hurdles you had to overcome.~~
-* ~~A link to your planning documentation for how you broke down this project with deliverables and timelines.~~
+- [x] A Git repository hosted on GitHub.~~
+- [x] Around 70 commits (or more) on GitHub, dating back to the very beginning of the project. (Commit early, commit often. Tell a story with your commits. Each message should         give a clear idea of what you changed.)~~
+- [x] A README.md file with:
+* Explanations of the machineries used.
+* A couple of paragraphs about the general approach you took.
+* Descriptions of any unsolved problems or major hurdles you had to overcome.
+* A link to your planning documentation for how you broke down this project with deliverables and timelines.
 * Installation instructions for any dependencies.
-* ~~A link to your user stories, ERD diagrams — who are your users, what do they want, and why?~~
+* A link to your user stories, ERD diagrams — who are your users, what do they want, and why?
 
 ### User Stories
 ***
@@ -69,5 +69,5 @@ The way we first came about approaching our project started off rocky- We tried 
 ###### Timeline
 ![image](https://user-images.githubusercontent.com/87440131/148092580-acfd1470-5c46-49fa-a921-5a157a2b653d.png)
 
- ## <mark>INSTRUCTIONS(STEP BY STEP) </mark>
+<mark> ## INSTRUCTIONS(STEP BY STEP) </mark>
 *
