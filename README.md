@@ -59,9 +59,8 @@ The way we first came about approaching our project started off rocky- We tried 
 * Postman --> We used postman(API platform) to help us test and build our endpoints
 * PgAdmin --> we used pgadmins sources to help us interact with our databases in viewing our tables that we built
 * IntelliJ --> worked inside of intelliJ wrtitng code to create our monolithic back-end. Within intelliJ we were able to sync up to springboot in order to use tomcat to run our application.
-* Maven
-* Spring Boot
-* 
+* Maven --> Helping to building dependencies
+* Spring Boot --> Helped us in the running of our actual project without needing an external webserver - Instead we can use an embedded web server to run it, which in our case we used Tomcat
 ##### Endpoints
 ![Endpoints1](https://user-images.githubusercontent.com/87440131/148090619-c19d091c-79a9-4c27-8eef-c25fe6782682.jpg)
 ![Endpoints2](https://user-images.githubusercontent.com/87440131/148090637-71497e99-cb71-4c75-abf2-b88fdafa584a.jpg)
@@ -70,5 +69,5 @@ The way we first came about approaching our project started off rocky- We tried 
 ###### Timeline
 ![image](https://user-images.githubusercontent.com/87440131/148092580-acfd1470-5c46-49fa-a921-5a157a2b653d.png)
 
-## INSTRUCTIONS(STEP BY STEP)
-
+ ## <mark>INSTRUCTIONS(STEP BY STEP) </mark>
+*
