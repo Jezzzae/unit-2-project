@@ -61,7 +61,8 @@ The way we first came about approaching our project started off rocky- We tried 
 ![Endpoints1](https://user-images.githubusercontent.com/87440131/148090619-c19d091c-79a9-4c27-8eef-c25fe6782682.jpg)
 ![Endpoints2](https://user-images.githubusercontent.com/87440131/148090637-71497e99-cb71-4c75-abf2-b88fdafa584a.jpg)
 #### ERD 🧑‍🤝‍🧑 👭
-![ERD with colored entities (UML notation)](https://user-images.githubusercontent.com/87440131/148090715-d84a159d-05e6-468b-86b6-367f8777aa73.png)
+![ERD with colored entities (UML notation)](https://user-images.githubusercontent.com/87440131/148582815-f10ac238-c8d7-4127-b129-47cff783de29.png)
+
 #### Timeline ⏱️
 |      Tuesday      |      Wednesday     |         Thursday        |     Friday     |Sat - Monday                |
 | ------------------|--------------------|-------------------------|----------------|----------------------------|
