@@ -71,7 +71,7 @@ The way we first came about approaching our project started off rocky- We tried 
 |                   |                    |                         |  Debugging     |                            |
 
 
-## INSTRUCTIONS(STEP BY STEP) 🔍 (*Assuming you have already installed pjAdmin, postman & IntelliJ on your machine)
+## INSTRUCTIONS(STEP BY STEP) 🔍 (*Assuming you have already installed pjAdmin, postman & IntelliJ on your machine*)
 * Fork & Clone this repo above
 * Open up in IntelliJ
 * Open pgAdmin, create database for books 
