@@ -1,14 +1,14 @@
 # unit-2-project 📚
 ## Book Store app Sheree &amp; Jess
 
-The Book StoreApp will allow a user to search for a book through a (predefined)database and save favorite books into a list that they will also be able to mangage by choosing which books to save, update, read, and remove.
+The Book StoreApp will allow a user to == search == for a book through a (predefined) database and == save == favorite books into a list that they will also be able to mangage by choosing which books to save, update, read, and remove.
 
 ### Technical requirements ⚙️
 - [x] Persist at least four models.
 - [x] Use Spring Profiles for environment settings.
 - [x] At least one API endpoint must perform full CRUD create, read, update, and delete actions.
 - [x] Other API endpoints can perform CRUD based on the business use-case.
-- [ ] Expose CRUD routes that were built using REST conventions.
+- [ ] == Expose CRUD routes that were built using REST conventions. ==
 - [x] Handle exceptions gracefully.
 - [x] Send appropriate messages back to the client in the event that an exception occurs.
 - [x] Must have Controller and Service separate.
