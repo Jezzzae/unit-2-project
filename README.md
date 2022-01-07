@@ -1,5 +1,5 @@
 # unit-2-project 📚
----
+
 ## Book Store app Sheree &amp; Jess
 
 The Book StoreApp will allow a user to search for a book through a (predefined) database and save favorite books into a list that they will also be able to mangage by choosing which books to save, update, read, and remove.
@@ -58,7 +58,7 @@ The way we first came about approaching our project started off rocky- We tried 
 * IntelliJ --> worked inside of intelliJ wrtitng code to create our monolithic back-end. Within intelliJ we were able to sync up to springboot in order to use tomcat to run our application.
 * Maven --> Helping to building dependencies
 * Spring Boot --> Helped us in the running of our actual project without needing an external webserver - Instead we can use an embedded web server to run it, which in our case we used Tomcat
-
+---
 ### Endpoints 📌
 ![Screenshot (14)](https://user-images.githubusercontent.com/29801753/148585525-f7d79745-eb74-4626-956a-3400b6e2b030.png)
 ---
