@@ -69,11 +69,10 @@ The way we first came about approaching our project started off rocky- We tried 
 ###### Timeline ⏱️
 |      Tuesday      |      Wednesday     |         Thursday        |     Friday     |Sat - Monday                |
 | ------------------|--------------------|-------------------------|----------------|----------------------------|
-|* Setup Spring boot|* Create models,    |* Complete booklist      | * Make sure MVP|* Practice for Presentations|
+| Setup Spring boot | Create models,     | Complete booklist       |  Make sure MVP | Practice for Presentations |
 | Enviroment        | repos, controller  | functionality.          |  is met & app  |  on Monday                 |
-|                   | & exceptions       |* Work on search features|  is functional |                            |
-|                   |                    |                         | * Debugging    |                            |
-| ------------------|--------------------|-------------------------|----------------|----------------------------|
+|                   | & exceptions       | Work on search features |  is functional |                            |
+|                   |                    |                         |  Debugging     |                            |
 
 ## INSTRUCTIONS(STEP BY STEP) 🔍 
 *
