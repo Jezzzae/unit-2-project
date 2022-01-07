@@ -82,7 +82,7 @@ a. <img width="333" alt="Screen Shot 2022-01-07 at 2 43 15 PM" src="https://user
 b. <img width="602" alt="Screen Shot 2022-01-07 at 2 44 13 PM" src="https://user-images.githubusercontent.com/87440131/148598668-2b6f9c9d-c1af-479f-a682-93b401aa4e25.png">
 
 ### 3. Add the following dependencies to the pom.xml file
-```
+```json
  <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
