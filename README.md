@@ -9,7 +9,7 @@ The Book StoreApp will allow a user to search for a book through a (predefined) 
 - [x] Use Spring Profiles for environment settings.
 - [x] At least one API endpoint must perform full CRUD create, read, update, and delete actions.
 - [x] Other API endpoints can perform CRUD based on the business use-case.
-- [ ] Expose CRUD routes that were built using REST conventions.
+- [x] Expose CRUD routes that were built using REST conventions.
 - [x] Handle exceptions gracefully.
 - [x] Send appropriate messages back to the client in the event that an exception occurs.
 - [x] Must have Controller and Service separate.
@@ -43,8 +43,8 @@ The Book StoreApp will allow a user to search for a book through a (predefined) 
 #### Struggles 🤕
 * Getting project approved first day 
 * understanding the scope of our project and implementing that into our ERD diagram
-* understanding how to merge and pull / push without causing any more erros
-* In the begining and even close to the middle of the week as a team we struggled to work in sync and this caused problems that directly effected our code for example when merging, pulling, pushing there was always an error that would hold us back again due to us working on files at the same time. The way we solved this was by taking our Squad Leader Suresh's advice and practicing driving & navigating together this way we avoided any unecessary git erros.
+* understanding how to merge and pull / push without causing any more errors
+* In the begining and even close to the middle of the week as a team we struggled to work in sync and this caused problems that directly effected our code for example when merging, pulling, pushing there was always an error that would hold us back again due to us working on files at the same time. The way we solved this was by taking our Squad Leader Suresh's advice and practicing driving & navigating together this way we avoided any unecessary git errors.
 
 #### Approach 🚂
 The way we first came about approaching our project started off rocky- We tried to divide and conquer tasks but very soon learned that was not the best way to work for us. After our struggles with that we started to join our efforts to work on the same problems this was more efficient for us because altough it seemed like it would take more time this method allowed us both to understand the concepts better by disscusing them as we went by. We tried to divide the workload of the project amoung us into certain days as seen below for example on monday we were dedicated to setting up the Spring enviroment which we finished before the end of the day. Then after we started tuesdays workload which is where we started to fall behind on because as demonstrated below there where more objectives to be met and as said before our way of working up until the end of tuesday was still divide and conquer. Once we started working in sync we approached each day with objectives that were put in place and personally curated for our team by our squad leader to help us stay on track.
@@ -79,8 +79,8 @@ The way we first came about approaching our project started off rocky- We tried 
 a. <img width="333" alt="Screen Shot 2022-01-07 at 2 43 15 PM" src="https://user-images.githubusercontent.com/87440131/148598628-261c79bc-2eca-4b92-80ab-2d679552a3f4.png">
 b. <img width="602" alt="Screen Shot 2022-01-07 at 2 44 13 PM" src="https://user-images.githubusercontent.com/87440131/148598668-2b6f9c9d-c1af-479f-a682-93b401aa4e25.png">
 
-#### 3. Open pgAdmin, create database called "bookstoreapp
-#### 4. Query through the database using these statements
+#### 3. Open pgAdmin, create database called "bookstoreapp"
+#### 4. Query through the database using these statements in pgAdmin
 
 ![Screenshot (16)](https://user-images.githubusercontent.com/29801753/148588548-fc6d778c-ae20-46cd-9a74-d3d9406a84c2.png)
 
