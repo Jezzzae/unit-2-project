@@ -67,12 +67,13 @@ The way we first came about approaching our project started off rocky- We tried 
 ###### ERD 🧑‍🤝‍🧑 👭
 ![ERD with colored entities (UML notation)](https://user-images.githubusercontent.com/87440131/148090715-d84a159d-05e6-468b-86b6-367f8777aa73.png)
 ###### Timeline ⏱️
-![image](https://user-images.githubusercontent.com/87440131/148092580-acfd1470-5c46-49fa-a921-5a157a2b653d.png)
-
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+|      Tuesday      |      Wednesday     |         Thursday        |     Friday     |Sat - Monday                |
+| ------------------|--------------------|-------------------------|----------------|----------------------------|
+|* Setup Spring boot|* Create models,    |* Complete booklist      | * Make sure MVP|* Practice for Presentations|
+| Enviroment        | repos, controller  | functionality.          |  is met & app  |  on Monday                 |
+|                   | & exceptions       |* Work on search features|  is functional |                            |
+|                   |                    |                         | * Debugging    |                            |
+| ------------------|--------------------|-------------------------|----------------|----------------------------|
 
 ## INSTRUCTIONS(STEP BY STEP) 🔍 
 *
