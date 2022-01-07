@@ -75,9 +75,10 @@ The way we first came about approaching our project started off rocky- We tried 
 ---
 
 ## INSTRUCTIONS(STEP BY STEP) 🔍 (*Assuming you have already installed pjAdmin, postman & IntelliJ on your machine*)
-*1 Fork & Clone this repo above
-*2 Open up in IntelliJ
-*3 Open pgAdmin, create database for books
-*4 Query through the database using these statements
+#### 1. Fork & Clone this repo above
+#### 2. Open up in IntelliJ
+#### 3. Open pgAdmin, create database for books
+#### 4. Query through the database using these statements
+
 ![Screenshot (16)](https://user-images.githubusercontent.com/29801753/148588548-fc6d778c-ae20-46cd-9a74-d3d9406a84c2.png)
 
