@@ -2,7 +2,7 @@
 
 ## Book Store app Sheree &amp; Jess
 
-The Book StoreApp will allow a user to search for a book through a (predefined) database and save favorite books into a list that they will also be able to mangage by choosing which books to save, update, read, and remove.
+The Book StoreApp will allow a user to search🔍 for a book through a (predefined) database and they will also be able to mangage by choosing which books to add, update, read, and remove.
 
 ### Technical requirements ⚙️
 - [x] Persist at least four models.
@@ -56,7 +56,7 @@ The way we first came about approaching our project started off rocky- We tried 
 * PgAdmin --> we used pgadmins sources to help us interact with our databases in viewing our tables that we built
 * IntelliJ --> worked inside of intelliJ wrtitng code to create our monolithic back-end. Within intelliJ we were able to sync up to springboot in order to use tomcat to run our application.
 * Maven --> Helping to building dependencies
-* Spring Boot --> Helped us in the running of our actual project without needing an external webserver - Instead we can use an embedded web server to run it, which in our case we used Tomcat
+* Spring Boot --> Helped us in the running of our actual project without needing an external webserver - Instead we can use an embedded web server to run it, which in our case we used Tomcat 🐱
 ---
 ### Endpoints 📌
 ![Screenshot (14)](https://user-images.githubusercontent.com/29801753/148585525-f7d79745-eb74-4626-956a-3400b6e2b030.png)
@@ -64,18 +64,21 @@ The way we first came about approaching our project started off rocky- We tried 
 #### ERD 🧑‍🤝‍🧑 👭
 ![ERD with colored entities (UML notation)](https://user-images.githubusercontent.com/87440131/148582815-f10ac238-c8d7-4127-b129-47cff783de29.png)
 ---
+
 #### Timeline ⏱️
-|      Tuesday      |      Wednesday     |         Thursday        |     Friday     |Sat - Monday                |
+
+|      Tuesday      |      Wednesday     |         Thursday        |     Friday     |       Sat - Monday         |
 | ------------------|--------------------|-------------------------|----------------|----------------------------|
 | Setup Spring boot | Create models,     | Complete booklist       |  Make sure MVP | Practice for Presentations |
 | Enviroment        | repos, controller  | functionality.          |  is met & app  |  on Monday                 |
 |                   | & exceptions       | Work on search features |  is functional |                            |
 |                   |                    |                         |  Debugging     |                            |
+
 ---
 
 ## INSTRUCTIONS(STEP BY STEP) 🔍 (*Assuming you have already installed pjAdmin, postman & IntelliJ on your machine*)
 ### 1. Fork & Clone this repo above 🔱
-### 2. Open up in IntelliJ - change the application.properities and the appication.dev.properities 
+### 2. Open up in IntelliJ - change the application.properities and the appication.dev.properities 💻
 a. <img width="333" alt="Screen Shot 2022-01-07 at 2 43 15 PM" src="https://user-images.githubusercontent.com/87440131/148598628-261c79bc-2eca-4b92-80ab-2d679552a3f4.png">
 b. <img width="602" alt="Screen Shot 2022-01-07 at 2 44 13 PM" src="https://user-images.githubusercontent.com/87440131/148598668-2b6f9c9d-c1af-479f-a682-93b401aa4e25.png">
 
@@ -84,7 +87,7 @@ b. <img width="602" alt="Screen Shot 2022-01-07 at 2 44 13 PM" src="https://user
        ![Screenshot (19)](https://user-images.githubusercontent.com/29801753/148600899-127a9a23-9197-4be1-b6c0-8e1aa37174ca.png)
 
 
-### 4. Query through the database using these statements in pgAdmin 
+### 4. Query through the database using these statements in pgAdmin 🗃
 
 ![Screenshot (16)](https://user-images.githubusercontent.com/29801753/148588548-fc6d778c-ae20-46cd-9a74-d3d9406a84c2.png)
 
