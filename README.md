@@ -2,7 +2,7 @@
 
 ## Book Store app Sheree &amp; Jess
 
-The Book StoreApp will allow a user to search for a book through a (predefined) database and save favorite books into a list that they will also be able to mangage by choosing which books to save, update, read, and remove.
+The Book StoreApp will allow a user to ==search== for a book through a (predefined) database and save favorite books into a list that they will also be able to mangage by choosing which books to save, update, read, and remove.
 
 ### Technical requirements ⚙️
 - [x] Persist at least four models.
