@@ -75,7 +75,10 @@ The way we first came about approaching our project started off rocky- We tried 
 
 ## INSTRUCTIONS(STEP BY STEP) 🔍 (*Assuming you have already installed pjAdmin, postman & IntelliJ on your machine*)
 #### 1. Fork & Clone this repo above
-#### 2. Open up in IntelliJ
+#### 2. Open up in IntelliJ - change the application.properities and the appication.dev.properities 
+a. <img width="333" alt="Screen Shot 2022-01-07 at 2 43 15 PM" src="https://user-images.githubusercontent.com/87440131/148598628-261c79bc-2eca-4b92-80ab-2d679552a3f4.png">
+b. <img width="602" alt="Screen Shot 2022-01-07 at 2 44 13 PM" src="https://user-images.githubusercontent.com/87440131/148598668-2b6f9c9d-c1af-479f-a682-93b401aa4e25.png">
+
 #### 3. Open pgAdmin, create database called "bookstoreapp
 #### 4. Query through the database using these statements
 
