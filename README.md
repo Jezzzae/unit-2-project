@@ -13,7 +13,7 @@ The Book - StoreApp will allow a user to search 🔍 for a book through the book
 - [x] Handle exceptions gracefully.
 - [x] Send appropriate messages back to the client in the event that an exception occurs.
 - [x] Must have Controller and Service separate.
-- [x] Document each end-point, such that
+- [x] Document each end-point
 
 ### Necessary Deliverables 🏁
 - [x] A Git repository hosted on GitHub.
