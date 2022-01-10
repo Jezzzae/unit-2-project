@@ -104,3 +104,6 @@ b. <img width="602" alt="Screen Shot 2022-01-07 at 2 44 13 PM" src="https://user
 
 ![Screenshot (16)](https://user-images.githubusercontent.com/29801753/148588548-fc6d778c-ae20-46cd-9a74-d3d9406a84c2.png)
 
+### 6. Questions & Answers :interrobang:
+
+![python-question-1](https://user-images.githubusercontent.com/87440131/148814814-2cd5ae1b-0845-4087-b735-28876a9adebe.jpeg)
