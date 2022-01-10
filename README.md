@@ -2,7 +2,7 @@
 
 ## Book Store app Sheree &amp; Jess
 
-The Book StoreApp will allow a user to search🔍 for a book through a (predefined) database and they will also be able to mangage by choosing which books to add, update, read, and remove.
+The Book - StoreApp will allow a user to search 🔍 for a book through the bookstoreapp database (setup instruction below). A user will be able to use this api to manage their book library. This app allows for full CRUD operations for  these four models: Book, Author, Genre, and Publisher. 
 
 ### Technical requirements ⚙️
 - [x] Persist at least four models.
@@ -28,17 +28,22 @@ The Book StoreApp will allow a user to search🔍 for a book through a (predefin
 
 ### User Stories 🦄
 ***
-* Book information is predefined
-* Will not be allowed to modify any of the database data 
 * When searching for books - The book should display Author, Genre, Publisher, and Title
 * Will be able to find a book according to Title
-* Will be able to find a book according to Author
-* Will be able to find a book according to Genre
-* Will be able to find a book according to Publisher
+* Will be able to find a book according to Author’s first_Name /or/ last_Name
+* Will be able to find a book according to Genre /or/ subGenre
+* Will be able to find a book according to Publisher’s name
 * Ability to add, view, update and remove a book
+* Ability to add, view, update and remove an author
+* Ability to add, view, update and remove a genre
+* Ability to add, view, update and remove a publisher
 * When searching for books by name of author - The author firstName, lastName, and author_Id by that author will be displayed.
 * When searching for books by the Genre - Should display the name of genre, and the subGenre name of books under that genre
 * When searching for a book under publisher- The publishers_name will be displayed
+
+<div class="tenor-gif-embed" data-postid="14725169" data-share-method="host" 
+data-aspect-ratio="1.77778" data-width="100%"><a href="https://tenor.com/view/struggle-bus-school-bus-gif-14725169">Struggle Bus GIF</a>from <a href="https://tenor.com/search/struggle-gifs">Struggle GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
 
 #### Struggles 🤕
 * Getting project approved first day 
@@ -81,7 +86,7 @@ The way we first came about approaching our project started off rocky- We tried 
 a. <img width="333" alt="Screen Shot 2022-01-07 at 2 43 15 PM" src="https://user-images.githubusercontent.com/87440131/148598628-261c79bc-2eca-4b92-80ab-2d679552a3f4.png">
 b. <img width="602" alt="Screen Shot 2022-01-07 at 2 44 13 PM" src="https://user-images.githubusercontent.com/87440131/148598668-2b6f9c9d-c1af-479f-a682-93b401aa4e25.png">
 
-### 3. Add the following dependencies to the pom.xml file
+### 3.  **If the following dependencies are missing**  Add the following dependencies to the pom.xml file
 ```json pink
  <dependency>
             <groupId>org.springframework.boot</groupId>
