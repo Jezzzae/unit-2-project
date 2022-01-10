@@ -83,7 +83,7 @@ The way we first came about approaching our project started off rocky- We tried 
 a. <img width="333" alt="Screen Shot 2022-01-07 at 2 43 15 PM" src="https://user-images.githubusercontent.com/87440131/148598628-261c79bc-2eca-4b92-80ab-2d679552a3f4.png">
 b. <img width="602" alt="Screen Shot 2022-01-07 at 2 44 13 PM" src="https://user-images.githubusercontent.com/87440131/148598668-2b6f9c9d-c1af-479f-a682-93b401aa4e25.png">
 
-### 3.  **If the following dependencies are missing**  Add the following dependencies to the pom.xml file
+### 3.  If the following dependencies are missing -  Please add the following dependencies to the pom.xml file
 ```json pink
  <dependency>
             <groupId>org.springframework.boot</groupId>
