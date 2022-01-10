@@ -41,9 +41,7 @@ The Book - StoreApp will allow a user to search 🔍 for a book through the book
 * When searching for books by the Genre - Should display the name of genre, and the subGenre name of books under that genre
 * When searching for a book under publisher- The publishers_name will be displayed
 
-<div class="tenor-gif-embed" data-postid="14725169" data-share-method="host" 
-data-aspect-ratio="1.77778" data-width="100%"><a href="https://tenor.com/view/struggle-bus-school-bus-gif-14725169">Struggle Bus GIF</a>from <a href="https://tenor.com/search/struggle-gifs">Struggle GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-
+https://tenor.com/view/struggle-bus-school-bus-gif-14725169
 
 #### Struggles 🤕
 * Getting project approved first day 
