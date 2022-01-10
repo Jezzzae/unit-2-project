@@ -41,7 +41,6 @@ The Book - StoreApp will allow a user to search 🔍 for a book through the book
 * When searching for books by the Genre - Should display the name of genre, and the subGenre name of books under that genre
 * When searching for a book under publisher- The publishers_name will be displayed
 
-https://tenor.com/view/struggle-bus-school-bus-gif-14725169
 
 #### Struggles 🤕
 * Getting project approved first day 
